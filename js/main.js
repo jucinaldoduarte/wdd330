@@ -14,8 +14,7 @@ fetch(requestURL)
         
         let list = document.getElementById("list"); 
         
-        let li = document.createElement("li");
-        
+        let li = document.createElement("li");        
         
         list.appendChild(li); 
         
