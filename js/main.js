@@ -19,7 +19,7 @@ fetch(requestURL)
         list.appendChild(li); 
         
         let a = document.createElement("a");
-        a.textContent = label;
+        a.textContent = `❱ ${label}`;
         a.setAttribute("href", url);
         li.appendChild(a);
         
