@@ -11,7 +11,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*----------- HEADER --------------*/
 header, main, footer {margin: 0 auto;}  
 header {/*padding: 1rem 2%; */text-align: center;}
-header h1 {margin: 0.5rem 0; font-size: 1.5rem; font-family: var(--heading-font); color: white;}
+header h1 {margin: 0.5rem 0; font-size: 1.5rem; font-family: var(--heading-font); color: white; margin-top: 2rem;}
 header h2 {margin: 0.5rem 0; font-size: 1.3rem; font-family: var(--heading-font); color: #64A494;}
 header h3 {margin: 0.5rem 0; font-size: 1rem;   font-family: var(--heading-font); color: white;}
 
@@ -21,6 +21,8 @@ body {font-size: 1rem; font-family: var(--paragraph-font); margin: 0 auto; backg
 main {background-color: white; margin: 0.5rem; padding: .0.5rem 2%; background-color: #101727; min-height: 35rem;}
 main h1 {font-size: 1.1rem; color: #64A494;}
 main h2 {font-size: 1rem; color: white;}
+main h3 {font-size: 1rem; color: white;}
+
 
 /*-------------- NAV ----------------------*/
 #nav {text-align: center;}
@@ -32,6 +34,8 @@ main h2 {font-size: 1rem; color: white;}
 #index {float: center;}
 #next {float: right;}
 
+main {color: white;}
+
 ul {margin-top: 3rem;}
 ul li {color: white; list-style-type: none; margin-bottom: 1rem; padding: 0; margin-top: 1rem;}
 ul li a {font-size: 1rem; color:#64A494; text-decoration: none; font-family: var(--heading-font); font-weight: bold;}
@@ -40,6 +44,19 @@ ul li a:hover{color: #64A494;}
 footer {font-family: var(--paragraph-font); text-align: center; color: white;}
 #byu-link {color: white; list-style: none; text-decoration: none;}
 #byu-link:hover {color: #64A494;}
+
+p {color: white;}
+section {color: white;}
+
+ol li {color: white;}
+
+a {color: white;}
+
+main section {color: white; margin-top: 1rem;}
+
+main .highlight {color: #64A494;}
+
+textarea {margin-top: 1rem; display: block; width: 21%; height: 10rem; background-color: #64A494;}
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {content: ""; display: table; clear: both;}
