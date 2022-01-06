@@ -31,7 +31,8 @@ main h3 {font-size: 1rem; color: white;}
 #nav a {font-size: 2rem;}
 
 #previous {float: left;}
-#index {float: center;}
+#nav #index {float: center; color: #64A494; font-size: 2rem;}
+
 #next {float: right;}
 
 main {color: white;}
