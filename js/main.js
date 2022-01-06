@@ -1,3 +1,5 @@
+
+//Index
 const requestURL = "data/links.json";
 
 fetch(requestURL)
@@ -21,16 +23,9 @@ fetch(requestURL)
         let a = document.createElement("a");
         a.textContent = label;
         a.setAttribute("href", url);
-        li.appendChild(a);
-        
+        li.appendChild(a);        
       }
   });
 
-  
-
-
-
-
-  
 
 
