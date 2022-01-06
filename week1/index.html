@@ -41,44 +41,47 @@
                     <li><a id="next" href="../week2/index.html">&#10230;</a></li>
                 </ul>
             </div>
+
             <h1>Week 01</h1>
             <h2>Notes from Doing Stuff With Web Things</h2>
-                       
-            <h3>Section 1: Functions and Events:</h3>
-            <p>&#9733; Hint: learn how to use git from the command line: <a href="http://git-scm.com/book/en/v2" target="_blank">Pro Git</a></p>
-            <p>Steps to Success:</p>
-            <ol>
-                <li>Think</li>
-                <li>Design</li>
-                <li>Test</li>
-                <li>Create</li>
-            </ol>
-            <p>"Think before you act". I need practice this one!</p>
-
-            <p>Creating a web page that changes when a button is clicked:</p>
-            <p>Code:</p>
-            <p class="highlight">function showCongratulations(theButtonClicked){</p>
-            <p class="highlight">document.getElementById("result_display").innerHTML = "Congratulations, you did it! You got the page to update!";</p>
-            <p class="highlight">theButtonClicked.innerHTML = "Click Me Again!";}</p>
-            <button onclick="showCongratulations(this)">Click Me!</button>
-            <section id="result_display"></section>
-
-            <h3>Section 2: Make It Nice (CSS):</h3>
-            <p>"A world without color, shading and depth of field would be awfully boring. Everything in black and white and
-                no visible distance? Yuck.</p>
-
-            <h3>Section 3: Remembering User's Info</h3>
-            <p>Code sample: Story Editor</p>
-            <label>Story Name: <input type="text" id="name_input" name="title"/></label>           
-            <section>
-                <button onclick="loadStory()">Find and Edit It</button>
-                <button onclick="saveStory()">Save It</button>
-                <button onclick="displayStory()">Display It</button>
-            </section>
-            <textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
-            <section id="story_display"></section>
-           
-
+            
+            <fieldset>  
+                <legend>Chapter 1: Stuff You Need to Know</legend>
+                <h1>Think First: Steps to Success</h1>
+                <ol>
+                    <li>Think</li>
+                    <li>Design</li>
+                    <li>Test</li>
+                    <li>Create</li>
+                </ol>
+            </fieldset>
+            
+            <fieldset> 
+                <legend>Chapter 2: Ready... Set... Go!</legend>
+                <h1>Functions and Events</h1>
+                <p>Creating a web page that changes when a button is clicked:</p>
+                <button onclick="showCongratulations(this)">Click Me!</button>
+                <section id="result_display"></section> 
+                
+                <h1>CSS: Make It Nice</h1>
+                <p>
+                    "A world without color, shading and depth of field would be awfully boring. Everything in black and white and
+                    no visible distance? Yuck.
+                </p>
+            </fieldset> 
+            
+            <fieldset>
+                <legend>Section 3: Remembering User's Info</legend>                    
+                <h1>Story Editor</h1>
+                <label>Story Name: <input type="text" id="name_input" name="title"/></label>           
+                    <section>
+                        <button onclick="loadStory()">Find and Edit It</button>
+                        <button onclick="saveStory()">Save It</button>
+                        <button onclick="displayStory()">Display It</button>
+                    </section>
+                        <textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
+                    <section id="story_display"></section>
+                </fieldset>           
         </main>                    
         <footer>
             <p>&copy; Jucinaldo Duarte | Brazil | <a id="byu-link" href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a></p>
