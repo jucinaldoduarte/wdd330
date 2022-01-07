@@ -65,6 +65,10 @@ textarea {margin-top: 1rem; display: block; width: 100%; height: 10rem; backgrou
 fieldset{margin-bottom: 2rem;}
 legend {padding: 0.5rem; color: #64A494; font-size: 1.1rem;}
 
+#rainbow {width: 100%; height: 10rem; border: solid 1px white;}
+
+#button{ margin-bottom: 1rem;}
+
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {content: ""; display: table; clear: both;}
 

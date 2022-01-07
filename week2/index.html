@@ -44,50 +44,107 @@
             </div>
 
             <h1>Week 02</h1>
-            <h2>Notes from Doing Stuff With Web Things</h2>
+            <h2>Notes from Javascript: Novice to Ninja 2nd Edition</h2>
             
             <fieldset>  
-                <legend>Chapter 1: Stuff You Need to Know</legend>
-                <h1>Think First: Steps to Success</h1>
-                <ol>
-                    <li>Think</li>
-                    <li>Design</li>
-                    <li>Test</li>
-                    <li>Create</li>
-                </ol>
+                <legend>Chapter 1: Hello JavaScript</legend>
+                <h1>Node.js</h1>
+                <p>In 2009, Ryan Dahl developed Node.js based on Google's V8 engine</p>
+
+                <p>ECMAScript | European Computer Manufacturers Association: Specification</p>
+                <p>JavaScript: Language</p>
+
+                <h1>Node Installer</h1>
+                <p>Windows or MAC: <a href="https://nodejs.org/en/download">Node Installer</a></p>
+
+                <h1>Change HTML Background Color With JavaScript:</h1>
+                <p>const btn = document.getElementById('button');</p>
+                <p>const rainbow = ['red','orange','yellow','green','blue','rebeccapurple','violet'];</p>
+                <p>function change() {    </p>  
+                <p>document.body.style.background = rainbow[Math.floor(7*Math.random())];}</p>
+                <button id='button'>Change color</button>
+                <div id="rainbow"></div>                
             </fieldset>
-            
-            <fieldset> 
-                <legend>Chapter 2: Ready... Set... Go!</legend>
-                <h1>Functions and Events</h1>
-                <p>Creating a web page that changes when a button is clicked:</p>
-                <button onclick="showCongratulations(this)">Click Me!</button>
-                <section id="result_display"></section> 
-                
-                <h1>CSS: Make It Nice</h1>
-                <p>
-                    "A world without color, shading and depth of field would be awfully boring. Everything in black and white and
-                    no visible distance? Yuck.
-                </p>
-            </fieldset> 
-            
-            <fieldset>
-                <legend>Chapter 3: Remembering User's Info</legend>                    
-                <h1>Story Editor</h1>
-                <label>Story Name: <input type="text" id="name_input" name="title"/></label>           
-                    <section>
-                        <button onclick="loadStory()">Find and Edit It</button>
-                        <button onclick="saveStory()">Save It</button>
-                        <button onclick="displayStory()">Display It</button>
-                    </section>
-                        <textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
-                    <section id="story_display"></section>
-                </fieldset>           
+
+            <fieldset>  
+                <legend>Chapter 2: Programming Basics</legend>
+                <h1>How JavaScript Works</h1>
+                <h2>Comments</h2> 
+                <p>// this is a short comment</p>  
+                <p>/* This is a longer comment</p>
+                <p>anything here will be ignored</p>
+                <p>This is a useful place to put notes</p>
+                <p>*/</p>
+                <h2>JavaScript Grammar</h2> 
+                <h3>Statements:</h3>
+                <p>const message = 'Hello World!';</p>
+                <p>alert(message);</p>
+                <h3>Block:</h3>
+                <p>A block is a series of statements that are collected together inside curly braces</p>
+                <p>Blocks do not need to be terminated by a semicolon.</p> 
+                <h3>Data Types</h3> 
+                <ol>
+                    <li>String</li>
+                    <li>Symbol </li>
+                    <li>Number </li>
+                    <li>Boolean </li>
+                    <li>Undefined </li>
+                    <li>Null</li>
+                    <li>Object</li>
+                </ol>
+                <h3>typeof operator</h3>
+                <p>A operator for finding out the type of a value</p>
+
+                <h3>Variables</h3>
+                <p>From ES6 onwards, JavaScript uses the keywords const and let to declare variables.</p>
+                <p>They are block scoped, so their value only exists inside the block they are declared in.</p>
+
+                <h3>Global Scope</h3>
+                <p>Any variable declared outside of a block is said to have global scope.</p>
+
+                <h3>Working with Strings</h3>
+                <p>name.length; // retrieve the name variable's length property </p>
+                <p>name.toUpperCase();</p>
+                <p>name.toLowerCase();</p>
+                <p>name.charAt(1);</p>
+                <p>name.indexOf('A');</p>
+                <p>name.lastIndexOf('a');</p>
+                <p>name.includes('a');</p>
+                <p>name.startsWith('A');</p>
+                <p>'JavaScript'.concat('Ninja');</p>
+                <p>or</p>
+                <p>'Java' + 'Script' + ' ' + 'Ninja';</p>
+                <p>'    Hello World     '.trim(); // the space in the middle will be preserved</p>
+                <p>'Hello'.repeat(2);</p>
+
+                <h3>Template Literals</h3>
+                <p>`I will be ${ age + 1 } next year`; </p>
+
+                <h3>Symbols</h3>
+                <p>const uniqueID = Symbol('this is a unique ID'); </p>
+                <p>It is possible for two variables to point to the same symbol if the for() method is used when the symbol is created:</p>
+                <p>const A = Symbol.for('shared symbol');</p>
+                <p>const B = Symbol.for('shared symbol');</p>
+
+                <h3>Numbers</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+            </fieldset>
         </main>                    
         <footer>
             <p>&copy; Jucinaldo Duarte | Brazil | <a id="byu-link" href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a></p>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <script src="../js/week1.js"></script>               
+        <script src="../js/week2.js"></script>               
     </body>
 </html>
