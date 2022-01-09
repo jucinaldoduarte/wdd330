@@ -9,7 +9,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /*----------- HEADER --------------*/
-header, main, footer {margin: 0 auto;}  
+header, main, footer {margin: 0 auto;} 
 header {/*padding: 1rem 2%; */text-align: center;}
 header h1 {margin: 0.5rem 0; font-size: 1.5rem; font-family: var(--heading-font); color: white; margin-top: 2rem;}
 header h2 {margin: 0.5rem 0; font-size: 1.3rem; font-family: var(--heading-font); color: #64A494;}
@@ -45,7 +45,7 @@ ul li {color: white; list-style-type: none; margin-bottom: 1rem; padding: 0; mar
 ul li a {font-size: 1rem; color:#64A494; text-decoration: none; font-family: var(--heading-font); font-weight: bold;}
 ul li a:hover{color: #64A494;}
 
-footer {font-family: var(--paragraph-font); text-align: center; color: white;}
+footer {font-family: var(--paragraph-font); text-align: center; color: white; margin: 0 0.5rem;}
 #byu-link {color: white; list-style: none; text-decoration: none;}
 #byu-link:hover {color: #64A494;}
 
@@ -60,14 +60,21 @@ main section {color: white; margin-top: 1rem;}
 
 main .highlight {color: #64A494;}
 
+
+
 textarea {margin-top: 1rem; display: block; width: 100%; height: 10rem; background-color: #64A494; color: white;}
 
-fieldset{margin-bottom: 2rem;}
+fieldset {margin-bottom: 2rem;}
+
 legend {padding: 0.5rem; color: #64A494; font-size: 1.1rem;}
 
-#rainbow {width: 100%; height: 10rem; border: solid 1px white;}
+#rainbow {height: 10rem; border: solid 1px white;}
 
 #button{ margin-bottom: 1rem;}
+
+
+
+
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {content: ""; display: table; clear: both;}
