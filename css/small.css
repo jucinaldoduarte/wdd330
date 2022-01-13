@@ -21,7 +21,7 @@ body {font-size: 1rem; font-family: var(--paragraph-font); margin: 0 auto; backg
 main {background-color: white; margin: 0.5rem; padding: .0.5rem 2%; background-color: #101727; min-height: 35rem;}
 main h1 {font-size: 1.1rem; color: #64A494;}
 main h2 {font-size: 1rem; color: white;}
-main h3 {font-size: 1rem; color: white;}
+main h3 {font-size: 1rem; color: #64A494;}
 
 
 /*-------------- NAV ----------------------*/
@@ -59,8 +59,6 @@ a {color: white;}
 main section {color: white; margin-top: 1rem;}
 
 main .highlight {color: #64A494;}
-
-
 
 textarea {margin-top: 1rem; display: block; width: 100%; height: 10rem; background-color: #64A494; color: white;}
 
