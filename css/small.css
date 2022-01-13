@@ -31,7 +31,7 @@ main h3 {font-size: 1rem; color: #64A494;}
 #nav a {font-size: 2rem;}
 
 #previous {float: left;}
-#nav #index {float: center; color: #64A494; font-size: 2rem;}
+#nav #index {color: #64A494; font-size: 2rem;}
 #next {float: right;}
 
 #previous:hover {color: white;}
