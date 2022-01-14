@@ -260,7 +260,30 @@
                     <p>};</p>
                     <p>const goodbye = function bye(){</p>
                     <p>console.log('Goodbye World!');</p>
-                    <p>};</p>                    
+                    <p>};</p> 
+                    
+                    <h3>Variable Numbers of Arguments</h3>
+                    <p>function rest(...args){</p>
+                    <p>    for(arg of args){</p>
+                    <p>        console.log(arg);</p>
+                    <p>    }</p>
+                    <p>}</p> 
+                    
+                    <h3>Arrow Functions</h3>
+                    <p>const square = x => x * x;</p>
+                    <p>const add = (x,y) => x + y;</p>
+                    <p>const hello = () => alert('Hello World!');</p> 
+                    
+                    <h3>Callbacks</h3>
+                    <p>function sing(song) {</p>
+                    <p>console.log(`I'm singing along to ${song}`);</p>
+                    <p>}</p>                        
+                    <p>sing('Let It Go')</p>
+
+                    <p>function sing(song,callback) {</p>
+                    <p>console.log(`I'm singing along to ${song}.`);</p>
+                    <p>callback();</p>
+                    <p>}</p>
                 </fieldset>
             </div>
         </main>                    
