@@ -43,10 +43,74 @@
                 </ul>
             </div>
             <h1>Week 03</h1>
+            <h2>Notes from Javascript.info article: Object Methods</h2>
+            <p>Object:</p>
+            <p>let user = {</p>
+            <p>    name: "John",</p>
+            <p>    age: 30</p>
+            <p>  };</p>
+            <p></p>
+            <p>Method</p>
+            <p>let user = {</p>
+            <p>    name: "John",</p>
+            <p>    age: 30</p>
+            <p>  };</p>
+            <p></p>
+            <p>user.sayHi = function() {</p>
+            <p>    alert("Hello!");</p>
+            <p>  };</p>
+            <p>  user.sayHi(); // Hello!</p>
+            <p></p>
+            <p>Method shorthand</p>
+            <p>// these objects do the same</p>
+
+            <p>user = {</p>
+            <p>sayHi: function() {</p>
+            <p>alert("Hello");</p>
+            <p>}</p>
+            <p>};</p>
+            <p></p>
+            <p>// method shorthand looks better, right?</p>
+            <p>user = {</p>
+            <p>sayHi() { // same as "sayHi: function(){...}"</p>
+            <p>alert("Hello");</p>
+            <p>}</p>
+            <p>};</p>
+            <p></p>
+            <p>“this” in methods</p>
+            <p>let user = {</p>
+            <p>    name: "John",</p>
+            <p>    age: 30,</p>
+            <p></p>              
+            <p>sayHi() {</p>
+            <p>// "this" is the "current object"</p>
+            <p> alert(this.name);</p>
+            <p>}</p>              
+            <p>};</p>
+            <p></p>
+            <p>user.sayHi(); // John</p> 
+
+            <h2>Notes from Doing Stuff With Web Things</h2>
             <fieldset>
                 <legend>Chapter 5: Objects</legend>
                 <h2>Object Literals</h2>
+                <p>const superman = {</p>
+                <p>name: 'Superman',</p>
+                <p>'real name': 'Clark Kent',</p>
+                <p>height: 75,</p>
+                <p>weight: 235,</p>
+                <p>hero: true,</p>
+                <p>villain: false,</p>
+                <p>allies: ['Batman','Supergirl','Superboy'],</p>
+                <p>fly() {</p>
+                <p>    return 'Up, up and away!';</p>
+                <p>}</p>
+                <p>};</p>
+                <h2>Creating Objects</h2>
                 <p>const spiderman = {};</p>
+                <h3>Accessing Properties</h3>
+                <p>superman.name</p>
+                <p>superman[name]</p>
                 <h3>Calling Methods</h3>
                 <p>superman.fly()</p>
                 <h3>Checking if Properties or Methods Exist</h3>
@@ -55,6 +119,46 @@
                 <p>for(const key in superman) {</p>
                 <p>console.log(key + ": " + superman[key]);</p>
                 <p>}</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Chapter 6: Document Object Model</legend>
+                <h3>Getting elements</h3>
+                <p>const body = document.body;</p>
+                <h3>Getting An Element By Its ID</h3>
+                <p>const h1 = document.getElementById('title');</p>
+                <h3>Get Elements By Their Tag Name</h3>
+                <p>const listItems = document.getElementsByTagName('li');</p>
+                <h3>Get Elements By Their Class Name</h3>
+                <p>const heroes = document.getElementsByClassName('hero');</p>
+                <h3>Setting An Element’s Attributes</h3>
+                <p>wonderWoman.setAttribute('class', 'villain');</p>
+                <h3>Creating An Element</h3>
+                <p>const flash = document.createElement('li');</p>  
+                <h3>Creating a Text Node</h3>  
+                <p>const flashText = document.createTextNode('Flash');</p>   
+                <h3>Appending Nodes</h3>  
+                <p>flash.appendChild(flashText);</p>  
+                <h3>A Function To Create Elements</h3> 
+                <p>function createElement (tag,text) {</p>
+                <p>const el = document.createElement(tag);</p>
+                <p>el.textContent = text;</p>
+                <p>return el</p>
+                <p>}</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Chapter 7: Events</legend>
+                <h3>Event Listeners</h3>
+                <p>if (click) {</p>
+                <p>    doSomething();</p>
+                <p>    } else {</p>
+                <p>    // carry on with rest of the program</p>
+                <p>    }</p>
+
+                <h3>The Click Event</h3>
+                <p>onclick="console.log('You Clicked Me!')">Click Me"</p>
+                
             </fieldset>
         </main>                    
         <footer>
