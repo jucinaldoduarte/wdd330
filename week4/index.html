@@ -60,6 +60,51 @@
             <p>input.addEventListener('focus', () => alert('focused'), false);</p>
              
             </fieldset>
+            <fieldset>
+                <legend>Chapter 12: Object-Oriented Programming in Javascript</legend>
+                <h3>Constructor Functions</h3>
+                <p>const Dice = function(sides=6){</p>
+                <p>this.sides = sides;</p>
+                <p>this.roll = function() {</p>
+                <p>return Math.floor(this.sides * Math.random() + 1)</p>
+                <p>}</p>
+                <p>}</p>
+                <p></p>
+                <p>const redDice = new Dice();</p>
+                <h3>ES6 Class Declarations</h3>
+                <p>class Dice {</p>
+                <p>    constructor(sides=6) {</p>
+                <p>    this.sides = sides;</p>
+                <p>    }</p>
+                <p></p>
+                <p>    roll() {</p>
+                <p>    return Math.floor(this.sides * Math.random() + 1)</p>
+                <p>    }</p>
+                <p>}</p>
+                <p></p>
+                <p>const blueDice = new Dice(20);</p>
+                <h3>The Constructor Property </h3>
+                <p>blueDice.constructor </p>
+                <p></p>
+                <p>const literalObject = {};</p>
+                <p>literalObject.constructor</p>
+                <h3>Static Methods</h3>
+                <p>static description() {</p>
+                <p>return 'A way of choosing random numbers'</p>
+                <p>}</p>
+                <p></p>
+                <p>Dice.description()</p>
+                <p>Static methods are not available to instances of the class.</p>
+                
+                 
+            </span>
+                
+               
+
+                    
+                    
+
+            </fieldset>
         </main>                    
         <footer>
             <p>&copy; Jucinaldo Duarte | Brazil | <a id="byu-link" href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a></p>
