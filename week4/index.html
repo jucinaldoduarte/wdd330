@@ -48,11 +48,16 @@
                 <legend>Chapter 8: Forms</legend>
             <h3>Forms</h3>
             <form name='search' action='/search'>
-                <input name='searchInput'>
+                <input name='searchInput' placeholder='Search Here'>
                 <button type='submit' onclick="window.open('unicorn.html')">Search</button>
+            </form>  
 
-            </form>   
-                 
+            <p>const form = document.forms.search;</p>
+            <p>const form = document.forms['search'];</p>
+
+            <h3>Form Events</h3>
+            <p>const input = form.elements.searchInput;</p>
+            <p>input.addEventListener('focus', () => alert('focused'), false);</p>
              
             </fieldset>
         </main>                    
@@ -60,6 +65,6 @@
             <p>&copy; Jucinaldo Duarte | Brazil | <a id="byu-link" href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a></p>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <script src="../js/main.js"></script>        
+        <script src="../js/week4.js"></script>        
     </body>
 </html>
