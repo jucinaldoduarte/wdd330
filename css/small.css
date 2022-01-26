@@ -68,6 +68,8 @@ legend {padding: 0.5rem; color: #64A494; font-size: 1.1rem;}
 
 #unicorn {font-size: 10rem; margin-top: 0;}
 
+ul {margin-top: 0; list-style: none; padding:0;}
+
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {content: ""; display: table; clear: both;}
