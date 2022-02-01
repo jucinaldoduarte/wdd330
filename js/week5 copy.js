@@ -7,32 +7,43 @@ function addTask() {
 
   //Create Div
   let taskdiv = document.createElement('div');
-  taskdiv.setAttribute('id','taskdiv');
-  document.getElementById('holder').appendChild(taskdiv);  
+  taskdiv.setAttribute('id',`taskdiv${i}`);
+  taskdiv.setAttribute('class','taskdiv');
+  document.getElementById('holder').appendChild(taskdiv);
+  taskdiv.style.border = "thick solid #FFFFFF";
 
   //Create checkbox
   let checkbox = document.createElement('input');
   checkbox.type = "checkbox";
+  checkbox.setAttribute('id',`checkbox${i}`);
   checkbox.setAttribute('class','checkbox');
   //document.getElementById('holder').appendChild(checkbox);  
-  document.getElementById('taskdiv').appendChild(checkbox);  
+  document.getElementById(`taskdiv${i}`).appendChild(checkbox);  
 
   //Create span
   let task = document.createElement('span');
-  task.setAttribute('class','task');
+  task.setAttribute('id',`task${i}`);
+  task.setAttribute('class', 'task');
   //document.getElementById('holder').appendChild(task);
-  document.getElementById('taskdiv').appendChild(task);
+  document.getElementById(`taskdiv${i}`).appendChild(task);
 
   //Create button
   let btnClose = document.createElement('button');
-  btnClose.setAttribute('class','btnClose');  
-  document.getElementById('taskdiv').appendChild(btnClose);
+  btnClose.setAttribute('id',`btnClose${i}`); 
+  btnClose.setAttribute('class', 'btnClose');   
+  document.getElementById(`taskdiv${i}`).appendChild(btnClose);
   btnClose.textContent = "X";
-  btnClose.onclick = function(){
-    alert("yes");
-    this.parentElement.style.backgroundColor = "red";
-  }
-  
+  btnClose.style.fontSize = "2rem";
+  btnClose.style.paddingTop = "0.5rem";
+  btnClose.style.paddingBottom = "0.5rem";
+  btnClose.style.background = "none";
+  btnClose.style.border = "none";
+  btnClose.style.color = "white";
+  btnClose.onclick = function(){    
+    this.parentElement.style.backgroundColor = "red";    
+    let taskToclose = document.getElementById(btnClose.parentNode.id);
+    taskToclose.style.display = "none";
+  }  
 
   //Add input text to task
   task.textContent = textInput.value;
@@ -44,9 +55,11 @@ function addTask() {
       task.style.textDecoration = "none";
     }
   }); 
+  
 
   i = i + 1;
-  console.log(i);
+  
+
 
 }
 

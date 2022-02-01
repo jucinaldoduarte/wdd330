@@ -38,7 +38,7 @@ main h3 {font-size: 1rem; color: #64A494;}
 #nav #index:hover {color: white;}
 #nav #next:hover {color: white;}
 
-ul {margin-top: 3rem;}
+/*ul {margin-top: 3rem;}*/
 ul li {color: white; list-style-type: none; margin-bottom: 1rem; padding: 0; margin-top: 1rem;}
 ul li a {font-size: 1rem; color:#64A494; text-decoration: none; font-family: var(--heading-font); font-weight: bold;}
 ul li a:hover{color: white;}
@@ -71,8 +71,12 @@ legend {padding: 0.5rem; color: #64A494; font-size: 1.1rem;}
 #holder {
     margin: auto;
     margin-top: 40px;
-    width: 70%;
-    border: 3px solid white;
+    width: 70%;    
+    padding: 10px;
+}
+#dashboard {
+    margin: auto;    
+    width: 70%;    
     padding: 10px;
 }
 
@@ -84,18 +88,18 @@ span {color: white;}
     transform: scale(2);
     padding: 10px;
     margin: 0 10px;
+
 }
+
 .task {
     padding: 10px; 
     display: inline-block;
-    width: 90%;   
-    border: solid 1px white;
+    width: 90%; 
     margin-bottom: 10px;    
 }
 .btnClose {
     margin-left: 10px;    
 } 
-
 .divSubmit {
     margin: auto;
     margin-top: 40px;
@@ -103,7 +107,6 @@ span {color: white;}
     border: 3px solid white;
     padding: 10px;    
 }
-
 #textInput {
     width: 80%;
 }
