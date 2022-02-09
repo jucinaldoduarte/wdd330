@@ -145,6 +145,7 @@ input[type="text"] {
     border-radius: 10px;
     padding: 15px;
     width: 85%;
+
     font-size: 1.2rem;
 }
 
@@ -241,7 +242,10 @@ input[type="text"] {
     color: white;
 }
 
-.todo-list-form {margin-top: 1rem;}
+.todo-list-form {
+    margin-top: 3%;
+    margin-left: 3%;    
+}
 
 
 
