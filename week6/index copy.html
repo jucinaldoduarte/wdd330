@@ -47,19 +47,21 @@
             <h1>Week 06</h1>
             <fieldset>
                 <legend>Challenge One: Todo</legend> 
-                <section>                    
-                    <ul class="todo-list"></ul>
-                        <div class="todo-filter">
-                            <span class="counter"></span>
-                            <button class="btnAll active">All</button>
-                            <button class="btnActive inActive">Active</button>
-                            <button class="btnComplete inActive">Complete</button>
-                        </div>
-                    <form class="todo-list-form">
-                        <input type="text" class="addTodo" name="addTodo" required>
-                        <button class="btnAddTodo" name="btnAddTodo">+</button>
-                    </form>
-                </section>    
+                <p>&#9998; We are working on it...</p>
+                         
+                <div id="holder"></div>  
+                <div id="dashboard"></div>         
+
+                <div class="divSubmit">
+                    <input type="text" id="textInput">
+                    <button onclick="addTask()">&#10009;</button>
+                </div>
+
+                <div class="divDashboard">
+                    <button onclick="showAll">All</button> 
+                    <button onclick="showActive">Active</button> 
+                    <button onclick="showComplete">Complete</button>                   
+                </div>                
             </fieldset>
             
         </main>                    
@@ -67,6 +69,6 @@
             <p>&copy; Jucinaldo Duarte | Brazil | <a id="byu-link" href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a></p>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <script src="../js/week6/todo.js" type="module"></script>       
+        <script src="../js/week6.js"></script>       
     </body>
 </html>
