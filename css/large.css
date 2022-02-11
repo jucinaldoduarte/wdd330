@@ -1,5 +1,21 @@
 /* 64em is also 1028px when basefont is 16px */
 @media only screen and (min-width: 64rem) {  
     main {padding: 0 10rem;}
+
+    section {        
+        max-width: 600px;
+        margin: 0 auto;
+        
+    }
+
+    form {        
+        width: 97%;
+        
+    }
+
+    .item span {        
+        font-size: 1.2rem;
+    }
+    
     
 } /*end large */
