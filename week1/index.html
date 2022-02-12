@@ -74,12 +74,12 @@
             <fieldset>
                 <legend>Chapter 3: Remembering User's Info</legend>                    
                 <h1>Story Editor</h1>
-                <label>Story Name: <input type="text" id="name_input" name="title"/></label>           
-                    <section>
+                <label id="storyName">Story Name: <input type="text" id="name_input" name="title"/></label>           
+                    <section id="story_section">
                         <button onclick="loadStory()">Find and Edit It</button>
                         <button onclick="saveStory()">Save It</button>
                         <button onclick="displayStory()">Display It</button>
-                    </section>
+                    </section >
                         <textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
                     <section id="story_display"></section>
                 </fieldset>           

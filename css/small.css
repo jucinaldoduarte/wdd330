@@ -223,6 +223,18 @@ input[type="text"] {
     margin-left: 3%;  
 }
 
+#storyName{color: white;}
+
+#result_display {
+    display: block;
+    height: 2rem;
+}
+
+#story_section {
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+
 
 
 
