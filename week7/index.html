@@ -43,6 +43,149 @@
                 </ul>
             </div>
             <h1>Week 07</h1>
+            <h2>Notes from Javascript: Novice to Ninja 2nd Edition</h2>
+            <fieldset>
+                <legend>Chapter 11: Futher Functions</legend>
+                <h3>Function Properties and Methods</h3>
+                <p>All functions have a length property:</p>
+                <p>function square(x) {</p>
+                <p>return x*x;</p>
+                <p>}</p> 
+                <p></p>
+                <p>square.length</p>  
+                <h3>Call and Apply Methods</h3>
+                <p>function sayHello(){</p>   
+                <p>return `Hello, my name is ${this.name}`;</p> 
+                <p>}</p>   
+                <p>const clark = {name: 'Clark'};</p> 
+                <p>const bruce = {name: 'Bruce'};</p>  
+                <p></p>  
+                <p>sayHello.call(clark)</p>
+                <p>sayHello.call(bruce)</p>
+                <p></p>
+                <p>function sayHello(greeting='Hello'){</p>
+                <p>return `${ greeting }, my name is ${ this.name }`;</p>
+                <p>}</p>                    
+                <p>sayHello.call(clark, 'How do you do');</p>                
+                <p>sayHello.call(bruce);</p>   
+                <h3>Custom Properties</h3>  
+                <p>square.description = 'Squares a number that is provided as an argument'</p> 
+                <h3>Memorization</h3>  
+                <p>function square(x){</p>
+                <p>square.cache = square.cache || {};</p>    
+                <p>if (!square.cache[x]){</p>  
+                <p>square.cache[x] = x*x;</p>   
+                <p>}</p>
+                <p>return square.cache[x]</p>  
+                <p>}</p> 
+                <h3>Immediately Invoked Function Expressions </h3>
+                <p>(function(){</p>
+                <p>const temp = 'World';</p>
+                <p>console.log(`Hello ${temp}`);</p>
+                <p>})();</p>
+                <p></p>
+                <h3>Temporary Variables</h3>
+                <p>let a = 1;</p>
+                <p>let b = 2;</p>
+                <p></p>
+                <p>(()=>{</p>
+                <p>const temp = a;</p>
+                <p>a = b;</p>
+                <p>b = temp;</p>
+                <p>})();</p>
+                <h3>Initialization Code</h3>
+                <p>(function() {</p>
+                <p>const name = 'Peter Parker'; // This might be obtained from a cookie in reality</p>
+                <p>const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday', 'Friday','Saturday'];</p>
+                <p>const date = new Date(),today = days[date.getDay()];</p>
+                <p>console.log(`Welcome back ${name}. Today is ${today}`);</p>
+                <p>})();</p>  
+                <h3>Safe Use of Strict Mode</h3>  
+                <p>(function() {</p>
+                <p>'use strict';</p>
+                <p></p>    
+                <p>// All your code would go inside this function</p>
+                <p></p>    
+                <p>})();</p>
+                <h3>Creating Self-contained Code Blocks</h3> 
+                <p>(function() {</p>
+                <p>// block A</p>
+                <p>const name = 'Block A';</p>
+                <p>console.log(`Hello from ${name}`);</p>
+                <p>}());</p>
+                <p></p>    
+                <p>(function() {</p>
+                <p>// block B</p>
+                <p>const name = 'Block B';</p>
+                <p>console.log(`Hello from ${name}`);</p>
+                <p>}());</p>
+                <h3>Recursive Functions </h3>
+                <p>function factorial(n) {</p>
+                <p>if (n === 0) {</p>
+                <p>return 1;</p>
+                <p>} else {return n * factorial(n - 1);</p>
+                <p>}</p>
+                <p>}</p>
+                <h3>Callbacks</h3>
+                <p>function wait(message, callback, seconds){</p>
+                <p>setTimeout(callback,seconds * 1000);</p>
+                <p>console.log(message);</p>
+                <p>}</p>
+                <p></p>                   
+                <p>function selfDestruct(){</p>
+                <p>console.log('BOOOOM!');</p>
+                <p>}</p> 
+                <p>wait('This tape will self-destruct in five seconds ... ', selfDestruct, 5);</p>
+                <p>console.log('Hmmm, should I accept this mission or not ... ?');</p>
+                <h3>Promises</h3>   
+                                
+            </fieldset>
+            <fieldset>
+                <legend>Chapter 13: Ajax</legend>
+                <p>Ajax is a technique that allows web pages to communicate asynchronously with a server, 
+                    and it dynamically updates web pages without reloading.
+                </p>
+                <h3>The Fetch API</h3>
+                <p>fetch('https://example.com/data')</p>
+                <p>.then( // code that handles the response )</p>
+                <p>.catch( // code that runs if the server returns an error )</p>
+                <h3>Responsive Interface</h3>
+                <p>const url = 'https:example.com/data';</p>
+                <p>fetch(url)</p>
+                <p>.then((response) => {</p>
+                <p></p>
+                <p>if(response.ok) {</p>
+                <p>return response;</p>
+                <p>}</p>
+                <p>throw Error(response.statusText);</p>
+                <p>})</p>
+                <p>.then( response => // do something with response )</p>
+                <p>.catch( error => console.log('There was an error!') )</p>
+                <h3>Redirects</h3>
+                <p>fetch(url)</p>
+                <p>.then( response => response.redirect(newURL)); // redirects to another URL</p>
+                <p>.then( // do something else )</p>
+                <p>.catch( error => console.log('There was an error: ', error))</p>
+
+                <h3>Text Responses</h3> 
+                <p>fetch(url)</p>
+                <p>.then( response => response.text() ); // transforms the text stream into a JavaScript string</p>
+                <p>.then( text => console.log(text) )</p>
+                <p>.catch( error => console.log('There was an error: ', error))</p>
+
+                <h3>File Responses</h3> 
+                <p>fetch(url)</p>
+                <p>.then( response => response.blob() ); // transforms the data into a blob object</p>
+                <p>.then( blob => console.log(blob.type) )</p>
+                <p>.catch( error => console.log('There was an error: ', error))</p>
+
+                <h3>JSON Responses</h3> 
+                <p>fetch(url)</p>
+                <p>.then( response => response.json() ); // transforms the JSON data into a JavaScript object</p>
+                <p>.then( data => console.log(Object.entries(data)) )</p>
+                <p>.catch( error => console.log('There was an error: ', error))</p>
+
+            </fieldset>                
         </main>                    
         <footer>
             <p>&copy; Jucinaldo Duarte | Brazil | <a id="byu-link" href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a></p>
