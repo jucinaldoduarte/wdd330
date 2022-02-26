@@ -43,11 +43,74 @@
                 </ul>
             </div>
             <h1>Week 08</h1>
+            <h2>Notes from HTML5 and CSS3 for the Real world book</h2>           
+            <fieldset>
+                <legend>Chapter 08: Transforms and Transitions</legend>
+                <h3>Transform</h3> 
+                <p>To manipulate an element's appereance</p>
+                <h3>Translation</h3>
+                <p>To move elements </p>
+                <h3>Scaling</h3> 
+                <p>The scale(x,y) function scales an element by the defined factors horizontally then vertically.</p>
+                <h3>Rotation</h3>
+                <p>The rotate() function rotates an element around the point of origin by a specified angle value.</p>
+                <div class="ad">
+                    <img src="../img/fight.jpg">
+                    <h1>PUT</h1> 
+                    <H1>YOUR</H1>
+                    <span>DUKES</span>
+                    <h1>Up sire</h1>
+                </div>
+                <h3>Transitions</h3>
+                <p>Transitions allow the values of CSS properties to change over time, essentially providing simple animations.</p>
+                <div class="trans">
+                    <div class="trans-box"></div>
+                    <div class="trans-box"></div>
+                    <div class="trans-box"></div>
+                </div>
+                <h3>Animations</h3>
+                <div class="animations">
+                    <div class="animations-box"></div>                    
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Chapter 12: Canvas, SVG, and Drag and Drop</legend>
+                <h1>Canvas</h1>
+                <button type="button" class="drawButton" onclick="drawSquare()">Click Me!</button>
+                <canvas id="myCanvas" class="myCanvas" >
+                    Sorry! Your browser does not support Canvas.
+                </canvas>               
+
+                <h1>SVG</h1>  
+                <h2>Example:</h2>    
+                <div class="svgDiv">
+                    &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 50 50"&gt;
+                    &lt;circle cx="50" cy="50" r="50" fill="red"&gt;
+                    &lt;/svg&gt;
+                </div>   
+                            
+ 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 50 50 50">
+                    <circle cx="50" cy="50" r="50" fill="#64A494"/>
+                </svg>                 
+
+                <h2>Drag and Drop</h2>
+                <p>There are several steps to adding drag and drop to your page: </p>
+                <ol>
+                    <li>Set the draggable attribute on any HTML elements you’d like to be draggable.</li>
+                    <li>Add an event listener for the dragstart event on any draggable HTML elements.</li>
+                    <li>Add an event listener for the dragover and drop events on any elements that you want to have accept dropped items.</li>
+                </ol>
+                 
+
+                
+ 
+       
         </main>                    
         <footer>
             <p>&copy; Jucinaldo Duarte | Brazil | <a id="byu-link" href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a></p>
         </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <script src="../js/main.js"></script>        
+        <script src="../js/week8.js"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>               
     </body>
 </html>

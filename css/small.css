@@ -232,6 +232,115 @@ input[type="text"] {
     height: 5rem;
     margin-bottom: 1rem;
 }
+.ad {
+    background-color: white;
+    padding: 1rem;
+}
+.ad h1 {
+    font-size: 5rem;
+}
+.ad img {
+    float: left;
+}
+.ad span {
+    font-size: 70px;
+    font-weight: bold;
+    color: #999999;
+    display: inline-block;
+}
+.ad span:hover {
+    color: red;  
+    transform: rotate(10deg) translateX(60px) scale(1.5);
+}
+.trans .trans-box {
+    display: inline-block;
+    background-color: #64A494;
+    width: 80px;
+    height: 80px;
+    padding: 0.5rem;
+    text-align: center; 
+    margin: 2rem;  
+    border-radius: 50%;  
+    
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out; 
+}
+.trans .trans-box:hover { 
+    transform:rotate(45deg);   
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg); 
+    border-radius: 0%;    
+}
+
+
+/*
+.animations .animations-box {
+    display: inline-block;
+    background-color: #64A494;
+    width: 80px;
+    height: 80px;
+    padding: 0.5rem;
+    text-align: center; 
+    margin: 2rem; 
+
+}
+*/
+@keyframes bike {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 360px;
+    }
+}
+@keyframes move {
+    0% {
+        transform:translateX(-100px);
+    }
+    100% {
+        transform: translateX((100px));
+    }
+}
+.animations {
+    background-color: white;
+}
+.animations:after {
+    content:'';
+    width: 300px;
+    height: 92px;    
+    background-image: url(../img/bike_sprite.png);
+    display: block;
+    margin: auto;
+    animation:
+        0.4s steps(4, end) infinite 50ms bike,
+        8s linear infinite 50ms move;
+    animation-play-state: paused;
+    border-left: solid 1px black;
+    border-right: solid 1px black;    
+}
+
+.drawButton {padding: 0.3rem; display: block; margin-bottom: 2rem;}
+.animations:after {
+    animation-play-state: running;
+}
+.myCanvas {
+    border: dotted 2px #64A494;
+    background-color: white;
+}
+
+.svgDiv {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
 
 
 
