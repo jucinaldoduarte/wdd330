@@ -43,11 +43,144 @@
                 </ul>
             </div>
             <h1>Week 09</h1>
+            <h2>Notes from  Javascript: Novice to ninja</h2>           
+            <fieldset>
+                <legend>Chapter 09: The Window Object</legend>
+                <p>Every JavaScript environment has a global object.</p>
+                <p>Any variables that are created in the global scope are actually properties of this object</p> 
+                <p>Any functions are methods of it. In a browser environment the global object is the window object, 
+                    which represents the browser window that contains a web page.</p> 
+                    
+                <h1>The Browser Object Model</h1>
+                <p>The Browser Object Model (or BOM for short) is a collection of properties and methods that contain 
+                    information about the browser and computer screen.
+                </p>
+
+                <h1>Global Variables</h1>
+                <p>These are variables that are created without using the const, let or var keywords. Global variables can be accessed in all parts of the program.</p>
+
+                <p>In a browser environment, the global object is the window object. This means that any global variable created is actually a property of the window object</p>
+                <p>x = 6;  // global variable created</p>
+                <div id="showGlobalVariableDiv">
+                    <button type="button" class="showGlobalVariable" onclick="showGlobalVariable()">Show me!</button>
+                </div>
+                <h1>Dialogs</h1>
+                <div id="dialogs">                    
+                    <button type="button" class="showGlobalVariable" onclick="showAlert()">Alert</button>
+                    
+                    <button type="button" class="showGlobalVariable" onclick="showConfirm()">Confirm</button>
+                    
+                    <button type="button" class="showGlobalVariable" onclick="showPrompt()">Prompt</button>
+                </div>
+                <h1>Browser Information</h1>
+                <div id="showBrowser">
+                    <button type="button" class="showGlobalVariable" id="showBrowserButton" onclick="showBrowser()">Browser</button>
+                </div>
+                <h1>Location</h1>
+                <p>The window.location property is an object that contains information about the URL of the current page.</p>
+                <div id="showLocation">
+                    <button type="button" id="locationButton" class="showGlobalVariable" onclick="showLocation()">Location</button>
+                    <button type="button" id="protocolButton" class="showGlobalVariable" onclick="showProtocol()">Protocol</button>
+                    <button type="button" id="hostButton" class="showGlobalVariable" onclick="showHost()">Host</button>
+                </div>
+                <h1>The Browser History</h1>
+                
+                <div id="showHistory">
+                    <p>The window.history property can be used to access information about any previously visited pages in the current browser session.</p>
+
+                <p>The window.history.length property shows how many pages have been visited before arriving at the current page.</p>
+
+                <button type="button" id="lengthButton" class="showGlobalVariable" onclick="showLengthHistory()">Length</button>
+                <p>Reload the current page</p>
+                <button type="button" id="reloadButton" class="showGlobalVariable" onclick="reloadCurrent()">Reload</button>
+                </div>
+                <h1>Controlling Windows</h1>
+                <p>A new window can be opened using the window.open() method.</p>
+                <div id="openNewWindow">
+                    <button type="button" id="openNewWindowButton" class="showGlobalVariable" onclick="openNewWindow()">New Window</button>
+                    <button type="button" id="closeWindowButton" class="showGlobalVariable" onclick="closeWindow()">Close</button>  
+                </div>
+                <h1>Screen Information</h1>
+                <p>The window.screen object contains information about the screen the browser is displayed on.</p>
+                <div id="showScreen">
+                    <button type="button" id="showScreenButton" class="showGlobalVariable" onclick="showScreen()">Show Screen</button>
+                </div>
+                <h1>The Document Object</h1>
+                <p>Each window object contains a document object. This object has properties and methods that deal with the page that has been loaded into the window.</p>
+                
+                <h2>document.write()</h2>
+                <div id="docWriteDiv">
+                    <p>The write() method simply writes a string of text to the page. If a page has already loaded, it will completely replace the current document:</p>
+                    <button type="button" id="docWriteButton" class="showGlobalVariable" onclick="docWrite()">Write</button>
+                </div>
+                <h1>Cookies</h1>
+                <p>Cookies are small files that are saved locally on a user’s computer.</p>
+                <p>They can only be read by a web page from the same domain that set them.</p>
+                <p>Cookies are also limited to storing up to 4KB of data, although 20 cookies are allowed per domain.</p>
+                <h2>Creating Cookies</h2>
+                <p>To create a cookie, you assign it to JavaScript’s 'cookie jar', using the document.cookie property</p>
+                <div id="createCookieDiv">
+                    <p>Cookie name:</p>
+                    <input type="text" id="fCookie" name="fCookie">
+                    <button type="button" id="createCookieButton" class="showGlobalVariable" onclick="createCookie()">Create</button>
+                </div>
+
+                <p>document.cookie = 'name=Superman';</p>
+                <h2>Changing Cooking Values</h2>
+                <p>document.cookie = 'name=Batman' </p>
+                <h2>Reading Cookies</h2>
+                <p>To see the current contents of the cookie jar, simply enter document.cookie: </p>
+                <p>"name=Batman; hero=true; city=Gotham" </p>
+
+                <div id="showCookieDiv">
+                    <button type="button" id="showCookieButton" class="showGlobalVariable" onclick="showCookie()">Show</button>
+                </div>
+                <h1>Timing Functions</h1>                
+                <p>The window object provides some useful methods for scheduling the execution of a function, and for repeatedly executing functions at regular intervals.</p>
+                <!--<div id="timer">Time:<strong>20</strong></div>
+                <div id="score">Score:<strong>0</strong></div>-->
+            </fieldset>
+            <fieldset>
+                <legend>Chapter 14: HTML5 API</legend>
+                <h1>The data- Attribute</h1>
+                <p>The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser.</p>
+                <p>
+                    The names of these attributes can be decided by the developer, but they must use the following format:
+                    <ul>
+                        <li>&#9866; Start with data-</li>
+                        <li>&#9866; Contain only lowercase letters, numbers, hyphens, dots, colons or underscores</li>
+                        <li>&#9866; Include an optional string value</li>
+                    </ul>
+                    <p>Examples:</p>
+                    <ul>
+                        <li>&#9864; data-powers = 'flight superSpeed'</li>
+                        <li>&#9864; data-rating = '5'</li> 
+                        <li>&#9864; data-dropdown </li>
+                        <li>&#9864; data-user = 'DAZ' </li>
+                        <li>&#9864; data-max-length = '32'</li>
+                    </ul>
+                    <div id='hero' data-powers='flight superSpeed'>
+                        <h2>Markup Example</h2>
+                        <p>Superman</p>
+                        <button type="button" id="showDataPowers" class="showGlobalVariable" onclick="getDataPower()">Power</button>
+                    </div>
+                    <h3>HTML5 APIs</h3>
+                    <p>It’s still best practice to use feature detection before using any of the API methods.</p>
+                    <h3>HTML5 Web Storage</h3>
+                    <p>The Web Storage API has some crucial differences with cookies: </p>
+                    <ul>
+                        <li>&#9866; Information stored is not shared with the server on every request</li>
+                        <li>&#9866; Information is available in multiple windows of the browser (but only if the domain is the same)</li>
+                        <li>&#9866; Storage capacity limit is much larger than the 4KB limit for cookies (there is no actual limit in the specification, but most browsers have a limit set at 5GB per domain)</li>
+                        <li>&#9866; Any data stored does not automatically expire as it does with cookies. This potentially makes cookies a better choice for something like showing a popup once a day.</li>
+                    </ul>
+                </p>
+            </fieldset>
         </main>                    
         <footer>
             <p>&copy; Jucinaldo Duarte | Brazil | <a id="byu-link" href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a></p>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <script src="../js/main.js"></script>        
+        <script src="../js/week9.js"></script>        
     </body>
 </html>

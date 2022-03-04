@@ -335,6 +335,10 @@ input[type="text"] {
     margin-bottom: 1rem;
 }
 
+.showGlobalVariable {width: 100px;}
+
+#closeWindowButton {width: 100px; display: block; margin-top: 1rem;}
+
 
 
 
