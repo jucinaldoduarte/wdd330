@@ -43,11 +43,102 @@
                 </ul>
             </div>
             <h1>Week 10</h1>
+            <h2>Notes from  MDN</h2>  
+            <fieldset>
+                <legend>Validating Forms</legend>
+                <h1>Client-side validation types</h1>
+                <ul>
+                    <li>Built-in form validation uses HTML5 form validation features</li>
+                    <li>JavaScript validation is coded using JavaScript</li>
+                </ul>
+                <h2>Using built-in form validation</h2>
+                <ul>
+                    <li>required: Specifies whether a form field needs to be filled in before the form can be submitted.</li>
+                    <li>minlength and maxlength: Specifies the minimum and maximum length of textual data (strings).</li>
+                    <li>min and max: Specifies the minimum and maximum values of numerical input types.</li>
+                    <li>type: Specifies whether the data needs to be a number, an email address, or some other specific preset type.</li>
+                    <li>pattern: Specifies a regular expression that defines a pattern the entered data needs to follow.</li>
+                </ul>
+                <h2>Built-in form validation examples</h2>
+
+                <form>
+                    <label for="choose">Would you prefer a banana or a cherry?</label>
+                    <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+                    <button>Submit</button>
+                </form>
+                <p>
+                    In this example, the input element accepts one of four possible values: the strings "banana", "Banana", "cherry", or "Cherry". Regular expressions are case-sensitive, but we've made it support capitalized as well as lower-case versions using an extra "Aa" pattern nested inside square brackets.
+                </p>
+                <p>
+                    Note: The textarea element doesn't support the pattern attribute.
+                </p>
+
+                <h2>Constraining the length of your entries</h2>
+                <p>You can constrain the character length of all text fields created by "input" or "textarea" by using the minlength and maxlength attributes.</p>
+
+                <h2>Constraining the values of your entries</h2>
+                <p>
+                    For number fields (i.e. input type="number"), the min and max attributes can be used to provide a range of valid values. If the field contains a value outside this range, it will be invalid.
+                </p>
+                <p>Example</p>
+                <form>
+                    <div>
+                      <label for="choose">Would you prefer a banana or a cherry?</label>
+                      <input type="text" id="choose" name="i_like" required minlength="6" maxlength="6">
+                    </div>
+                    <div>
+                      <label for="number">How many would you like?</label>
+                      <input type="number" id="number" name="amount" value="1" min="1" max="10">
+                    </div>
+                    <div>
+                      <button>Submit</button>
+                    </div>
+                  </form>
+
+                  <h2>Validating forms using JavaScript</h2>
+                  <h3>The Constraint Validation API</h3>
+                  <p>Most browsers support the Constraint Validation API, which consists of a set of methods and properties available on the following form element DOM interfaces:
+                  </p>
+                  <ul>
+                    <li>HTMLButtonElement (represents a button element)</li>
+                        <li>HTMLFieldSetElement (represents a fieldset element)</li>
+                        <li>HTMLInputElement (represents an input element)</li>
+                        <li> HTMLOutputElement (represents an output element)</li>
+                        <li>HTMLSelectElement (represents a select element)</li>
+                        <li>HTMLTextAreaElement (represents a textarea element)</li>
+                </ul>
+                <h3>Implementing a customized error message</h3>
+                <p>These automated messages have two drawbacks:</p>
+                <ul>
+                    <li>There is no standard way to change their look and feel with CSS.</li>
+                    <li>They depend on the browser locale, which means that you can have a page in one language but an error message displayed in another language.</li>
+                </ul>
+
+                <form>
+                    <label for="mail">I would like you to provide me with an e-mail address:</label>
+                    <input type="email" id="mail" name="mail">
+                    <button>Submit</button>
+                  </form>
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Using Fetch</legend>
+                <h1>Using the Fetch API</h1>
+                <p>
+                    The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.
+                </p>
+                <p>fetch('http://example.com/movies.json')</p>
+                <p>.then(response => response.json())</p>
+                <p>.then(data => console.log(data));</p>
+                </p>
+            </fieldset>
         </main>                    
         <footer>
             <p>&copy; Jucinaldo Duarte | Brazil | <a id="byu-link" href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a></p>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <script src="../js/main.js"></script>        
+        <script src="../js/week10.js"></script>        
     </body>
 </html>
