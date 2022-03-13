@@ -38,7 +38,7 @@ main h3 {font-size: 1rem; color: #64A494;}
 #nav #index:hover {color: white;}
 #nav #next:hover {color: white;}
 
-ul {margin-top: 3rem;}
+/*ul {margin-top: 3rem;}*/
 ul li {color: white; list-style-type: none; margin-bottom: 1rem; padding: 0; margin-top: 1rem;}
 ul li a {font-size: 1rem; color:#64A494; text-decoration: none; font-family: var(--heading-font); font-weight: bold;}
 ul li a:hover{color: white;}
@@ -68,36 +68,318 @@ legend {padding: 0.5rem; color: #64A494; font-size: 1.1rem;}
 
 #unicorn {font-size: 10rem; margin-top: 0;}
 
+#holder {
+    margin: auto;
+    margin-top: 40px;
+    width: 70%;    
+    padding: 10px;
+}
+#dashboard {
+    margin: auto;    
+    width: 70%;    
+    padding: 10px;
+}
+
+.taskdiv span {color: white;}
+
+span {color: white;}
+
+.checkbox {
+    transform: scale(2);
+    padding: 10px;
+    margin: 0 10px;
+}
+.task {
+    padding: 10px; 
+    display: inline-block;
+    width: 90%; 
+    margin-bottom: 10px;    
+}
+.btnClose {
+    margin-left: 10px;    
+} 
+.divSubmit {
+    margin: auto;
+    margin-top: 40px;
+    width: 50%;
+    border: 3px solid white;
+    padding: 10px;    
+}
+#textInput {
+    width: 80%;
+}
+.item {
+    border: solid 1px white; 
+    padding: 1rem 1rem;
+}
+section {
+    color: white;    
+    height: 90vh;    
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    max-width: 300px;
+    overflow-y: auto;   
+    position: relative;
+    width: 100%;
+}
+.todo-list {
+    margin-bottom: 15px; 
+    list-style: none;
+}
+form {
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;    
+    width: 97%;
+}
+input[type="text"] {
+    border: 2px solid #222;
+    border-radius: 10px;
+    padding: 15px;
+    width: 85%;
+    font-size: 1.2rem;
+}
+.btnAddTodo {      
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 13%;
+}
+.btnAll, .btnActive, .btnComplete {
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 2px;    
+    margin: 1rem;
+    border-radius: 10px;
+    width: 100px;
+}
+.counter {
+    font-size: 0.95rem;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex; 
+}
+.checkbox-list, .title, .description {
+    margin-bottom: 15px;
+}
+.todo-filter {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;      
+}
+.item {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+    margin-bottom: 15px;    
+}
+.item span {
+    flex-grow: 1;
+    font-size: 1rem;
+    margin: 0 15px;
+}
+.checkBox {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.deleteData {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #64A494;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.strikeThrough {
+    text-decoration: line-through;
+    color: #64A494;
+}
+.text {
+    cursor: pointer;
+}
+.active {
+    background-color: #64A494;
+    color: white;
+    border: 2px solid white;
+}
+.inActive {    
+    background-color: #64A494;
+    border: 2px solid white;
+    color: white;
+}
+.todo-list-form {
+    margin-top: 3%;
+    margin-left: 3%;  
+}
+#storyName{color: white;}
+
+#result_display {
+    display: block;
+    height: 2rem;
+}
+#story_section {
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+.ad {
+    background-color: white;
+    padding: 1rem;
+}
+.ad h1 {
+    font-size: 5rem;
+}
+.ad img {
+    float: left;
+}
+.ad span {
+    font-size: 70px;
+    font-weight: bold;
+    color: #999999;
+    display: inline-block;
+}
+.ad span:hover {
+    color: red;  
+    transform: rotate(10deg) translateX(60px) scale(1.5);
+}
+.trans .trans-box {
+    display: inline-block;
+    background-color: #64A494;
+    width: 80px;
+    height: 80px;
+    padding: 0.5rem;
+    text-align: center; 
+    margin: 2rem;  
+    border-radius: 50%;  
+    
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out; 
+}
+.trans .trans-box:hover { 
+    transform:rotate(45deg);   
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg); 
+    border-radius: 0%;    
+}
 
 
-div .todo {display: grid; grid-template-columns: 10px auto 10px; border: solid 1px yellow;}
-div .divCheckBox {display: grid; grid-column: 1/2; border: solid 1px white; background-color: red;}
-div .divTask {display: grid; grid-column: 2/3; border: solid 1px white; background-color: blue;}
-div .divButton {display: grid; grid-column: 3/4; border: solid 1px white; background-color: green;}
+/*
+.animations .animations-box {
+    display: inline-block;
+    background-color: #64A494;
+    width: 80px;
+    height: 80px;
+    padding: 0.5rem;
+    text-align: center; 
+    margin: 2rem; 
 
+}
+*/
+@keyframes bike {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 360px;
+    }
+}
+@keyframes move {
+    0% {
+        transform:translateX(-100px);
+    }
+    100% {
+        transform: translateX((100px));
+    }
+}
+.animations {
+    background-color: white;
+}
+.animations:after {
+    content:'';
+    width: 300px;
+    height: 92px;    
+    background-image: url(../img/bike_sprite.png);
+    display: block;
+    margin: auto;
+    animation:
+        0.4s steps(4, end) infinite 50ms bike,
+        8s linear infinite 50ms move;
+    animation-play-state: paused;
+    border-left: solid 1px black;
+    border-right: solid 1px black;    
+}
 
+.drawButton {padding: 0.3rem; display: block; margin-bottom: 2rem;}
+.animations:after {
+    animation-play-state: running;
+}
+.myCanvas {
+    border: dotted 2px #64A494;
+    background-color: white;
+    width: 100%;
+    max-width: 100%;    
+}
+.svgDiv {
+    color: white;
+    margin-bottom: 1rem;
+}
 
+.showGlobalVariable {width: 100px;}
 
+#closeWindowButton {width: 100px; display: block; margin-top: 1rem;}
 
+form {display: block;}
+label {color: white;}
 
+input:invalid {
+    border: 2px dashed red;
+  }
 
+  input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+  }
 
+  input:valid {
+    border: 2px solid black;
+  }
 
+.app #dashboard {width: 100%;}
 
+.appHeader {margin-bottom: 3rem;}
+.appHeader #ico {color: white; font-size: 100px; transition: font-size 2s;}
+.appHeader h1 {margin: 0.5rem 0; font-size: 1.5rem; font-family: var(--heading-font); color: white;}
+.appHeader h2 {margin: 0.5rem 0; font-size: 1.3rem; font-family: var(--heading-font); color: #64A494;}
+.appHeader h3 {margin: 0.5rem 0; font-size: 1rem;   font-family: var(--heading-font); color: white;}
 
+main .app {background-color: white; margin: 0.5rem; padding: .0.5rem 2%; background-color: #101727; min-height: 35rem;}
 
+main .app h1 {font-size: 1.1rem; color: #64A494;}
+main .app h2 {font-size: 1rem; color: white;}
+main .app h3 {font-size: 1rem; color: #64A494;}
 
+/* Fieldset */
+main .app {text-align: center;}
+main .app fieldset {margin: 0 auto; max-width: 90%; margin-top: 1rem; border: solid 5px #64A494; border-radius: 0; background-color: #101727; color: white; font-weight: bold; transition: border-radius 2s, background-color 2s}
+main .app fieldset:hover {border-radius: 25px; border: solid 5px white; background-color: #64A494; color: black;}
+main .app fieldset legend {color:white; font-weight: bold; padding: 0 1rem; font-size: 1.5rem; padding-bottom: 2rem;}
+main .app fieldset span {display: block;}
 
+main .app fieldset #icoDiv img {border: 5px solid white; border-radius: 50%; background-color: #64A494; margin: 1rem; width: 100px;}
+main .app fieldset #icoDiv img:hover {border: 5px solid white; background-color: #64A494; margin: 1rem;}
 
-
-
-
-
-
-
-
-
-
+main .app fieldset #forecastDiv img {border: 5px solid #64A494; border-radius: 50%; background-color: white; margin: 1rem; width: 100px; transition: transform .2s;}
+main .app fieldset #forecastDiv img:hover {border: 5px solid white; background-color: #64A494; transform: scale(1.2); margin: 1rem;}
 
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {content: ""; display: table; clear: both;}

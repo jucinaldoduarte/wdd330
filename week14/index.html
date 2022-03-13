@@ -38,15 +38,44 @@
             <div id="nav">
                 <ul>
                     <li><a id="previous" href="../week13/index.html">&#10229;</a></li>
-                    <li><a id="index" href="../index.html">&#9900;</a></li>                    
+                    <li><a id="index" href="../index.html">&#9900;</a></li>    
+                    <li><a id="next" href="../week1/index.html">&#10230;</a></li>                
                 </ul>
             </div>
             <h1>Week 14</h1>
+            <h2>Final Project</h2>   
+
+            <div class="app">
+
+                <div class="appHeader">  
+                    <span id="ico">&#9728;</span>
+                    <h1>ClimaMatters.com</h1>         
+                    <h2>New thoughts. New Weather.</h2>                 
+                </div>   
+            
+                <fieldset id="dashboard" onmouseover="setFieldSet(this)" onmouseout="resetFieldSet(this)">
+                    <legend id="location">Current Weather</legend>
+                    <div id="icoDiv"></div>
+                    <span id="description"></span>
+                    <span id="temp"></span>
+                    <span id="humidity"></span>
+                    <span id="wind"></span>
+                    <span id="windchill"></span>
+                </fieldset>
+
+                <fieldset id="forecast" onmouseover="setFieldSet(this)" onmouseout="resetFieldSet(this)">
+                    <legend>Forecast</legend>
+                    <div id="forecastDiv"></div>
+                </fieldset>
+            </div>
+            
+                       
+
         </main>                    
         <footer>
             <p>&copy; Jucinaldo Duarte | Brazil | <a id="byu-link" href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a></p>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-        <script src="../js/main.js"></script>        
+        <script src="../js/week14/script.js"></script>        
     </body>
 </html>
