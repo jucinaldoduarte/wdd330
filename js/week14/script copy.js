@@ -6,10 +6,6 @@ let myWind = document.getElementById("wind");
 let myWindChill = document.getElementById("windchill");
 let dashboard = document.getElementById("dashboard");
 let myBpdy = document.getElementById("myBody");
-let myAlertDesc = document.getElementById("alertDesc");
-let myAlertEvent = document.getElementById("alertEvent");
-let myAlertSource = document.getElementById("alertSource");
-let myrefreshButton = document.getElementById("refreshBTN");
 
 let icoArray = [];
 icoArray.push("&#9728;");
@@ -18,43 +14,6 @@ icoArray.push("&#9730;");
 icoArray.push("&#9731;");
 
 let point = 0;
-
-function refreshPage() {
-    window.history.go(0);    
-}
-
-function changeIco(){
-    let img = htmlentities.decode(icoArray[point]);
-    let ico =  document.getElementById("ico");
-    ico.textContent = img;
-    if(point < ( icoArray.length - 1 ) ){
-      point++;
-    }else{
-      point = 0;
-    }  
-  }
-
-function setFieldSet(x) {  
-    let images = x.getElementsByTagName("IMG");    
-    for (let i = 0; i < images.length; i++) {
-        images[i].style.backgroundColor = "#101727";
-    }
- }
-
- function resetFieldSet(x) { 
-    let images = x.getElementsByTagName("IMG");    
-    for (let i = 0; i < images.length; i++) {
-        images[i].style.backgroundColor = "#64A494";
-    }
-}
-
-function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);      
-    } else {
-      myLocation.innerHTML = `Geolocation is not supported by this browser`;      
-    }
-  }
 
 (function(window){
 	window.htmlentities = {
@@ -85,19 +44,29 @@ function getLocation() {
 	};
 })(window);
 
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);      
+  } else {
+    myLocation.innerHTML = `Geolocation is not supported by this browser`;
+    //newLocation.innerHTML = `Geolocation is not supported by this browser: ${myBrowser}`;
+  }
+}
+
 function showPosition(position) {
     const appID = "4c4f7720e4f35419cea59c4ff154beb5";    
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
     const apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${appID}`;
+    
     const apiForecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${appID}`;
-    const apiAlertURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,daily&appid=${appID}`;
 
     //Data from location
     fetch(apiURL)
     .then((response) => response.json())
     .then((jsObject) => {  
-        //console.log(jsObject); 
+        console.log(jsObject); 
         //Icon URL
         const imagesrc = `https://openweathermap.org/img/w/${jsObject.weather[0].icon}.png`;
 
@@ -157,7 +126,7 @@ function showPosition(position) {
     fetch(apiForecastURL)
     .then((response) => response.json())
     .then((jsObject) => {
-        //console.log(jsObject); 
+        console.log(jsObject); 
         for (let n = 1; n < 6; n++) {
             const today = new Date();
             const nextdate = new Date(today);
@@ -201,7 +170,6 @@ function showPosition(position) {
                     
                     const img = document.createElement("img");                    
                     img.src = imagesrc;  
-                    
                                     
 
                     let forecast = document.getElementById("forecastDiv");
@@ -227,39 +195,43 @@ function showPosition(position) {
             }
           }
         }
-    });  
-    
-    //Alerts
-    fetch(apiAlertURL)
-    .then((response) => response.json())
-    .then((jsObject) => {  
-        console.log(jsObject); 
-        let alert = document.getElementById("alertstDiv");
-        for (let i = 0; i < jsObject.alerts.length; i++ )
-        {
-            let span1 = document.createElement("SPAN");
-            span1.textContent = `${jsObject.alerts[i].event}`;
-            span1.style.color = "orange";
-            alert.appendChild(span1); 
-             
+    });   
+}
 
-            let span2 = document.createElement("SPAN");
-            span2.textContent = `${jsObject.alerts[i].description}`;
-            alert.appendChild(span2);  
+getLocation();
 
-            let span3 = document.createElement("SPAN");
-            span3.textContent = `Source: ${jsObject.alerts[i].sender_name}`;
-            span3.style.color = "orange";
-            alert.appendChild(span3);  
+function setFieldSet(x) {    
+    let title = document.getElementById("location");
+    let ico = document.getElementById("icoIMG");
+    /*ico.style.backgroundColor = "#e96e50";
+    ico.style.border = "5px solid white";*/
+ }
 
-            let br = document.createElement("BR");
-            alert.appendChild(br);
-        }
-    });
+ function resetFieldSet(x) {    
+    let title = document.getElementById("location");    
+    let ico = document.getElementById("icoIMG");
+    /*ico.style.backgroundColor = "#64A494";
+    ico.style.border = "5px solid white;"  */
+}
+
+function changeIco(){
+  let img = htmlentities.decode(icoArray[point]);
+  let ico =  document.getElementById("ico");
+  ico.textContent = img;
+  if(point < ( icoArray.length - 1 ) ){
+    point++;
+  }else{
+    point = 0;
+  }
+  
+}
+
+function refreshPage() {
+    window.history.go(0);    
 }
 
    
-getLocation();
+  
 setInterval(changeIco, 2500);
 changeIco();
 

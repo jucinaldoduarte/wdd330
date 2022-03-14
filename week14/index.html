@@ -28,7 +28,7 @@
     <body>        
         <!--HEADER-->
         <header class="clearfix"> 
-            <h1>JUCINALDO DUARTE</h1>  
+            <h1>JUCINALDO DUARTE</h1>
             <h2>Web Frontend Development II</h2>            
             <h3>Javascript | CSS | HTML</h3>     
         </header>          
@@ -51,23 +51,30 @@
                     <span id="ico">&#9728;</span>
                     <h1>ClimaMatters.com</h1>         
                     <h2>New thoughts. New Weather.</h2>                 
-                </div>   
-            
+                </div> 
+                          
                 <fieldset id="dashboard" onmouseover="setFieldSet(this)" onmouseout="resetFieldSet(this)">
                     <legend id="location">Current Weather</legend>
+                    
                     <div id="icoDiv"></div>
                     <span id="description"></span>
                     <span id="temp"></span>
                     <span id="humidity"></span>
                     <span id="wind"></span>
                     <span id="windchill"></span>
+                    <button type="button" id="refreshBTN" onclick="refreshPage()">Refresh</button>
                 </fieldset>
 
                 <fieldset id="forecast" onmouseover="setFieldSet(this)" onmouseout="resetFieldSet(this)">
                     <legend>Forecast</legend>
                     <div id="forecastDiv"></div>
                 </fieldset>
-            </div>
+
+                <fieldset id="alertFieldset">
+                    <legend>Alerts</legend>
+                    <div id="alertstDiv"></div>                   
+                </fieldset>
+            </div>          
             
                        
 

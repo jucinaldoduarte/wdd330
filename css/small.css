@@ -381,6 +381,20 @@ main .app fieldset #icoDiv img:hover {background-color: #e96e50; transform: scal
 main .app fieldset #forecastDiv img {border: 5px solid white; border-radius: 50%; background-color: #64A494; margin: 1rem; width: 100px; transition: transform .2s;}
 main .app fieldset #forecastDiv img:hover {background-color: #e96e50; transform: scale(1.2); margin: 1rem;}
 
+#refreshBTN {
+    background-color: #64A494;
+    border: 3px solid white;   
+    color: white;       
+    display: block; 
+    margin: 0 auto; 
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 10px 20px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 16px;    
+}
+#refreshBTN:focus{background-color:yellow;}
 
 .highlight {color: orange;}
 /*----- Clearfix: Force an Element not to collapse -----*/
