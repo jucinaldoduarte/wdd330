@@ -94,7 +94,7 @@ function getWeatherData(position) {
     fetch(apiWeather)
     .then((response) => response.json())
     .then((jsObject) => {  
-        console.log(jsObject);
+        //console.log(jsObject);
 
         //Location
         local.textContent = `${jsObject.name}`; 
@@ -160,7 +160,7 @@ function getWeatherData(position) {
     fetch(apiOneCall)
     .then((response) => response.json())
     .then((jsObject) => {  
-        console.log(jsObject);
+        //console.log(jsObject);
         //Forecast
         for (let i = 1; i < jsObject.daily.length; i++ )
         { 
@@ -237,8 +237,7 @@ function showDetails(){
 
 function lastVisit(){
   let date = new Date().getTime();
-  let lastVisit = localStorage.getItem('myDate');
-  alert(lastVisit);
+  let lastVisit = localStorage.getItem('myDate');  
   let amountTime;
   if (lastVisit) {
       amountTime = Math.round((date - lastVisit) / 86400000); 
