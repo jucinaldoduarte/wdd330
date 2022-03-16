@@ -235,9 +235,35 @@ function showDetails(){
   }  
 }
 
+function lastVisit(){
+  let date = new Date().getTime();
+  let lastVisit = localStorage.getItem('myDate');
+  alert(lastVisit);
+  let amountTime;
+  if (lastVisit) {
+      amountTime = Math.round((date - lastVisit) / 86400000); 
+      localStorage.setItem('lastVisit', date);      
+  }
+  else {
+      localStorage.setItem('lastVisit', date);
+      amountTime = 0;       
+  }
+  if (amountTime == 0){
+      message = "Last visit: today";
+  }
+  if (amountTime == 1){
+      message = "Last visit: yesterday";
+  }
+  if (amountTime > 1){
+      message = `Last visit: ${amountTime} days ago`;
+  }
+  document.getElementById("spanLastVisit").textContent = message;    
+}
+
 getLocation();
 setInterval(changeIcon, 2500);
 changeIcon();
+lastVisit()
 
 
 
