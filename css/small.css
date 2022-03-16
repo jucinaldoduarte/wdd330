@@ -286,7 +286,7 @@ input[type="text"] {
         transform:translateX(-100px);
     }
     100% {
-        transform: translateX((100px));
+        transform: translateX(100px);
     }
 }
 .animations {
