@@ -396,6 +396,13 @@ main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); 
 }
 #refreshBTN:focus{background-color:yellow;}
 
+#alertFieldset{display: none;}
+
+#detailsDiv{display: none};
+
+#detailsBtn{font-size: 1.5rem; margin: 2rem;}
+#detailsBtn:hover{color: orange;};
+
 .highlight {color: orange;}
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {content: ""; display: table; clear: both;}
