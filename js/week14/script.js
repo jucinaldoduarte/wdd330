@@ -98,6 +98,7 @@ function getWeatherData(position) {
 
         //Location
         local.textContent = `${jsObject.name}`; 
+        local.setAttribute("id", "local"); 
         currentWeatherDiv.appendChild(local);
 
         //Icon
@@ -111,6 +112,7 @@ function getWeatherData(position) {
         //Temperature
         if (jsObject.main.temp != 'undefined'){
           let temp = document.createElement("SPAN");
+          temp.setAttribute("id", "temp"); 
           temp.textContent = `${jsObject.main.temp} ºC`;
           currentWeatherDiv.appendChild(temp);
         }
@@ -129,7 +131,7 @@ function getWeatherData(position) {
         
         let details = document.createElement('SPAN');
         details.setAttribute("id", "detailsBtn");
-        details.setAttribute("onclick", "showDetails()")
+        details.setAttribute("onclick", "showDetails()")        
         let img = htmlentities.decode(iconAdd);
         details.textContent = img;
         currentWeatherDiv.appendChild(details);

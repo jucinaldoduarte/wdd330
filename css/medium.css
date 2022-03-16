@@ -1,7 +1,11 @@
 /* 35em is also 560px when basefont is 16px */
 @media only screen and (min-width: 35rem) {
-    
-    
+    main .app .appHeader #icon {font-size: 100px;}
+    main h1 {font-size: 1.6rem;}
+    main h2 {font-size: 1.3rem;}
+    #local, #temp {font-size: 3rem;}
+
+        
 } /*end medium */
 
 

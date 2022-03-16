@@ -356,31 +356,54 @@ input:invalid {
 
 .app #dashboard {width: 100%;}
 
-.appHeader {margin-bottom: 3rem;}
-.appHeader #ico {color: white; font-size: 100px; transition: font-size 2s;}
-.appHeader h1 {margin: 0.5rem 0; font-size: 1.5rem; font-family: var(--heading-font); color: white;}
-.appHeader h2 {margin: 0.5rem 0; font-size: 1.3rem; font-family: var(--heading-font); color: #64A494;}
-.appHeader h3 {margin: 0.5rem 0; font-size: 1rem;   font-family: var(--heading-font); color: white;}
+main .app .appHeader {margin-bottom: 3rem;}
+main .app .appHeader #icon {color: white; font-size: 100px; transition: font-size 2s;}
+main .app .appHeader h1 {margin: 0.5rem 0; font-size: 1.6rem; font-family: var(--heading-font); color: #64A494;}
+main .app .appHeader h2 {margin: 0.5rem 0; font-size: 1.2rem; font-family: var(--heading-font); color: white;}
+main .app .appHeader h3 {margin: 0.5rem 0; font-size: 1rem;   font-family: var(--heading-font); color: white;}
 
 main .app {background-color: white; margin: 0.5rem; padding: .0.5rem 2%; background-color: #101727; min-height: 35rem;}
 
-main .app h1 {font-size: 1.1rem; color: #64A494;}
-main .app h2 {font-size: 1rem; color: white;}
+main .app h1 {font-size: 1.6rem; color: #64A494;}
+main .app h2 {font-size: 1.1rem; color: white;}
 main .app h3 {font-size: 1rem; color: #64A494;}
 
 /* Fieldset */
 main .app {text-align: center;}
 main .app fieldset {margin: 0 auto; max-width: 90%; margin-top: 1rem; border: solid 5px #64A494; border-radius: 0; background-color: #101727; color: white; font-weight: bold; transition: border-radius 2s, background-color 2s}
-main .app fieldset:hover {border-radius: 25px; border: solid 5px white; background-color: #64A494; color: black;}
+main .app fieldset:hover {border-radius: 25px; border: solid 5px white; background-color: #184d47; color: black;}
 main .app fieldset legend {color:white; font-weight: bold; padding: 0 1rem; font-size: 1.5rem; padding-bottom: 2rem;}
 main .app fieldset span {display: block;}
 
-main .app fieldset #icoDiv img {border: 5px solid white; border-radius: 50%; background-color: #64A494; margin: 1rem; width: 100px;}
-main .app fieldset #icoDiv img:hover {border: 5px solid white; background-color: #64A494; margin: 1rem;}
+main .app fieldset #icoDiv img {border: 5px solid white; border-radius: 50%; background-color: #64A494; margin: 1rem; width: 100px; transition: transform .2s;}
+main .app fieldset #icoDiv img:hover {background-color: #e96e50; transform: scale(1.2); margin: 1rem;}
 
-main .app fieldset #forecastDiv img {border: 5px solid #64A494; border-radius: 50%; background-color: white; margin: 1rem; width: 100px; transition: transform .2s;}
-main .app fieldset #forecastDiv img:hover {border: 5px solid white; background-color: #64A494; transform: scale(1.2); margin: 1rem;}
+main .app fieldset img {border: 5px solid white; border-radius: 50%; background-color: #64A494; margin: 1rem; width: 100px; transition: transform .2s;}
+main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); margin: 1rem;}
 
+#refreshBTN {
+    background-color: #64A494;
+    border: 3px solid white;   
+    color: white;       
+    display: block; 
+    margin: 0 auto; 
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 10px 20px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 16px;    
+}
+#refreshBTN:focus{background-color:orange;}
+
+#alertFieldset{display: none;}
+
+#detailsDiv{display: none};
+
+#detailsBtn{font-size: 1.5rem; margin: 2rem;}
+#detailsBtn:hover{color: orange};
+
+.highlight {color: orange;}
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {content: ""; display: table; clear: both;}
 
