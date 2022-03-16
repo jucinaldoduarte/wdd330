@@ -357,7 +357,7 @@ input:invalid {
 .app #dashboard {width: 100%;}
 
 main .app .appHeader {margin-bottom: 3rem;}
-main .app .appHeader #ico {color: white; font-size: 100px; transition: font-size 2s;}
+main .app .appHeader #icon {color: white; font-size: 100px; transition: font-size 2s;}
 main .app .appHeader h1 {margin: 0.5rem 0; font-size: 1.6rem; font-family: var(--heading-font); color: #64A494;}
 main .app .appHeader h2 {margin: 0.5rem 0; font-size: 1.2rem; font-family: var(--heading-font); color: white;}
 main .app .appHeader h3 {margin: 0.5rem 0; font-size: 1rem;   font-family: var(--heading-font); color: white;}
@@ -378,8 +378,8 @@ main .app fieldset span {display: block;}
 main .app fieldset #icoDiv img {border: 5px solid white; border-radius: 50%; background-color: #64A494; margin: 1rem; width: 100px; transition: transform .2s;}
 main .app fieldset #icoDiv img:hover {background-color: #e96e50; transform: scale(1.2); margin: 1rem;}
 
-main .app fieldset #forecastDiv img {border: 5px solid white; border-radius: 50%; background-color: #64A494; margin: 1rem; width: 100px; transition: transform .2s;}
-main .app fieldset #forecastDiv img:hover {background-color: #e96e50; transform: scale(1.2); margin: 1rem;}
+main .app fieldset img {border: 5px solid white; border-radius: 50%; background-color: #64A494; margin: 1rem; width: 100px; transition: transform .2s;}
+main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); margin: 1rem;}
 
 #refreshBTN {
     background-color: #64A494;
