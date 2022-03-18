@@ -38,14 +38,14 @@ function setFieldSet(x) {
     let images = x.getElementsByTagName("IMG");    
     for (let i = 0; i < images.length; i++) {
         images[i].style.backgroundColor = "#101727";
-    }
+    }  
  }
 
  function resetFieldSet(x) { 
     let images = x.getElementsByTagName("IMG");    
     for (let i = 0; i < images.length; i++) {
         images[i].style.backgroundColor = "#64A494";
-    }
+    }   
 }
 
 function getLocation() {
@@ -61,10 +61,10 @@ function formatString(text){
         for (let i = 0; i < textCapitalized.length; i++) {
             textCapitalized[i] = textCapitalized[i].charAt(0).toUpperCase() + textCapitalized[i].slice(1);                    
         }
-
         textCapitalized = textCapitalized.join(" ");
         return textCapitalized;
 }
+
 (function(window){
 	window.htmlentities = {		
 		encode : function(str) {
@@ -238,28 +238,22 @@ function showDetails(){
 }
 
 function lastVisit(){
-  let date = new Date().getTime();
-  let lastVisit = localStorage.getItem('myDate');  
-  let amountTime;
-  if (lastVisit) {
-      amountTime = Math.round((date - lastVisit) / 86400000); 
-      localStorage.setItem('lastVisit', date);      
+  let today = new Date();
+  today = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()
+  
+  let lastVisit = localStorage.getItem('lastVisit'); 
+  
+    
+  if (!lastVisit){
+    localStorage.setItem('lastVisit', today);
+    document.getElementById("spanLastVisit").textContent = `Last Visit: ${lastVisit}`;    
   }
-  else {
-      localStorage.setItem('lastVisit', date);
-      amountTime = 0;       
+  else {   
+    document.getElementById("spanLastVisit").textContent = `Last Visit: ${lastVisit}`;
   }
-  if (amountTime == 0){
-      message = "Last visit: today";
-  }
-  if (amountTime == 1){
-      message = "Last visit: yesterday";
-  }
-  if (amountTime > 1){
-      message = `Last visit: ${amountTime} days ago`;
-  }
-  document.getElementById("spanLastVisit").textContent = message;    
 }
+
+
 
 getLocation();
 setInterval(changeIcon, 2500);

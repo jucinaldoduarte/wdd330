@@ -392,6 +392,7 @@ main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); 
 
 #local, #temp {font-size: 2rem;}
 
+
 .highlight {color: orange;}
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {content: ""; display: table; clear: both;}
