@@ -101,6 +101,18 @@ function getWeatherData(position) {
         local.setAttribute("id", "local"); 
         currentWeatherDiv.appendChild(local);
 
+        //Last Location
+        let lastLocation = localStorage.getItem('lastLocation'); 
+
+        if (!lastLocation){   
+          localStorage.setItem('lastLocation', jsObject.name);     
+        }
+        else {   
+          document.getElementById("spanLastLocation").textContent = `- ${lastLocation}`;
+          localStorage.setItem('lastLocation', jsObject.name);
+        }  
+
+
         //Icon
         if (jsObject.weather[0].icon != 'undefined'){
           let iconURL = `https://openweathermap.org/img/w/${jsObject.weather[0].icon}.png`;
@@ -239,20 +251,31 @@ function showDetails(){
 
 function lastVisit(){
   let today = new Date();
-  today = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()
-  
+  let day = today.getDate();
+  let month = today.getMonth() + 1;
+  let year = today.getFullYear();
+
+  if(day < 9){
+    day = `0${day}`
+  }
+
+  if(month < 9){
+    month = `0${month}`;
+  } 
+
+  today = `${month}-${day}-${year}`;
+   
   let lastVisit = localStorage.getItem('lastVisit'); 
-  
     
-  if (!lastVisit){
-    localStorage.setItem('lastVisit', today);
-    document.getElementById("spanLastVisit").textContent = `Last Visit: ${lastVisit}`;    
+  if (!lastVisit){   
+    document.getElementById("spanLastVisit").textContent = `It seems it is your first visit. Welcome!`;
+    localStorage.setItem('lastVisit', today);     
   }
   else {   
     document.getElementById("spanLastVisit").textContent = `Last Visit: ${lastVisit}`;
-  }
+    localStorage.setItem('lastVisit', today);
+  }  
 }
-
 
 
 getLocation();
