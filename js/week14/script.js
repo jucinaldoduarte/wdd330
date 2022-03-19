@@ -268,7 +268,7 @@ function lastVisit(){
   let lastVisit = localStorage.getItem('lastVisit'); 
     
   if (!lastVisit){   
-    document.getElementById("spanLastVisit").textContent = `It seems it is your first visit. Welcome!`;
+    document.getElementById("spanLastVisit").textContent = `It seems like your first time here. Welcome!`;
     localStorage.setItem('lastVisit', today);     
   }
   else {   
