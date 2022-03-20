@@ -21,6 +21,22 @@
     .btnAll, .btnActive, .btnComplete {
         padding: 15px;        
     }
+
+    #counterDiv{margin: auto; padding: 0 2rem; text-align: center;}
+
+  #counterDayDiv, #counterHourDiv, #counterMinDiv, #counterSecDiv {
+      margin: 0 auto; 
+      margin-left: 2rem;
+      margin-right: 2rem;
+      border: white 5px solid;  
+      border-radius: 50%; 
+      width: 100px; 
+      height: 100px; 
+      text-align: center; 
+      margin-bottom: 2rem; 
+      padding: 1.5rem;
+      display: inline-block;      
+    }
     
     
 } /*end large */

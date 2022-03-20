@@ -406,10 +406,10 @@ main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); 
     animation-duration: 2s;
   }
 
-  #counterDiv{margin: 0 auto;}
+  #counterDiv{margin: 0 auto; padding: 0 2rem; text-align: center;}
 
   #counterDayDiv, #counterHourDiv, #counterMinDiv, #counterSecDiv {
-      margin: 0 auto; 
+      margin: 0 auto;      
       border: white 5px solid;  
       border-radius: 50%; 
       width: 100px; 
@@ -417,6 +417,7 @@ main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); 
       text-align: center; 
       margin-bottom: 2rem; 
       padding: 1.5rem;
+      display: block;      
     }
 
     #soon {text-align: center; font-size: 2rem;}
