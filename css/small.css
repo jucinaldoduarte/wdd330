@@ -344,7 +344,8 @@ input:invalid {
 .app #dashboard {width: 100%;}
 
 main .app .appHeader {margin-bottom: 3rem;}
-main .app .appHeader #icon {color: white; /*font-size: 100px;*/ font-size: 50px; transition: font-size 2s;}
+main .app .appHeader #icon {color: white; font-size: 50px; transition: font-size 2s;}
+main .app .appHeader #icon:hover {font-size: 80px;}
 main .app .appHeader h1 {margin: 0.5rem 0; font-size: 1.6rem; font-family: var(--heading-font); color: #64A494;}
 main .app .appHeader h2 {margin: 0.5rem 0; font-size: 1.2rem; font-family: var(--heading-font); color: white;}
 main .app .appHeader h3 {margin: 0.5rem 0; font-size: 1rem;   font-family: var(--heading-font); color: white;}
@@ -393,6 +394,17 @@ main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); 
 #local, #temp {font-size: 2rem;}
 
 #openWeatherIcon {padding: 10px; display: block; margin: 0 auto;}
+
+@keyframes backColor {
+    from {background-color: #64A494;}
+    to {background-color: #191A2E;}
+  }
+
+  body, main, main .app .appHeader, main .app, main .app fieldset {
+    background-color: #191A2E;;
+    animation-name: backColor;
+    animation-duration: 4s;
+  }
 
 
 .highlight {color: orange;}
