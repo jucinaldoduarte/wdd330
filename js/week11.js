@@ -42,9 +42,12 @@ function Countdown(){
           document.getElementById("counterHourSpan").textContent = "0";
           document.getElementById("counterMinSpan").textContent = "0";
           document.getElementById("counterSecSpan").textContent = "0";
-        }
+        }        
+        
+
       }, 1000);
   }
+
 
   Countdown();
 

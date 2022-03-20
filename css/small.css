@@ -420,13 +420,31 @@ main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); 
       display: block;      
     }
 
-    #soon {text-align: center; font-size: 2rem;}
+    #soon {text-align: center; font-size: 2rem; margin-bottom: 4rem;}
 
       
   #counterDayDiv span {display: block; text-align: center;}
   #counterHourDiv span {display: block; text-align: center;}
   #counterMinDiv span {display: block; text-align: center;}
   #counterSecDiv span {display: block; text-align: center;}
+
+
+  .border-circle{
+    animation-name:colorBorder;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-direction:normal;
+    border-color:white;
+    }
+
+@keyframes colorBorder{
+    from{
+        border-color:white;
+    }
+    to{
+        border-color:#64A494;
+    }
+}
 
 .highlight {color: orange;}
 /*----- Clearfix: Force an Element not to collapse -----*/
