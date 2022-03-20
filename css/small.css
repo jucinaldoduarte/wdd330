@@ -403,9 +403,29 @@ main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); 
   body, main, main .app .appHeader, main .app, main .app fieldset {
     background-color: #191A2E;;
     animation-name: backColor;
-    animation-duration: 4s;
+    animation-duration: 2s;
   }
 
+  #counterDiv{margin: 0 auto;}
+
+  #counterDayDiv, #counterHourDiv, #counterMinDiv, #counterSecDiv {
+      margin: 0 auto; 
+      border: white 5px solid;  
+      border-radius: 50%; 
+      width: 100px; 
+      height: 100px; 
+      text-align: center; 
+      margin-bottom: 2rem; 
+      padding: 1.5rem;
+    }
+
+    #soon {text-align: center; font-size: 2rem;}
+
+      
+  #counterDayDiv span {display: block; text-align: center;}
+  #counterHourDiv span {display: block; text-align: center;}
+  #counterMinDiv span {display: block; text-align: center;}
+  #counterSecDiv span {display: block; text-align: center;}
 
 .highlight {color: orange;}
 /*----- Clearfix: Force an Element not to collapse -----*/

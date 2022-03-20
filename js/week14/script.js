@@ -293,10 +293,12 @@ function lastVisit(){
 }
 
 
+
 getLocation();
 setInterval(changeIcon, 2500);
 changeIcon();
 lastVisit()
+
 
 
 
