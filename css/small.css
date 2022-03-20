@@ -16,9 +16,9 @@ header h2 {margin: 0.5rem 0; font-size: 1.3rem; font-family: var(--heading-font)
 header h3 {margin: 0.5rem 0; font-size: 1rem;   font-family: var(--heading-font); color: white;}
 
 /*----------- BODY --------------*/
-body {font-size: 1rem; font-family: var(--paragraph-font); margin: 0 auto; background-color: #101727;}
+body {font-size: 1rem; font-family: var(--paragraph-font); margin: 0 auto; background-color: #191A2E;}
 
-main {background-color: white; margin: 0.5rem; /*padding: .0.5rem 2%;*/ background-color: #101727; min-height: 35rem;}
+main {background-color: white; margin: 0.5rem; /*padding: .0.5rem 2%;*/ background-color: #191A2E; min-height: 35rem;}
 
 main h1 {font-size: 1.1rem; color: #64A494; padding: 0 2%;}
 main h2 {font-size: 1rem; color: white; padding: 0 2%;}
@@ -349,7 +349,7 @@ main .app .appHeader h1 {margin: 0.5rem 0; font-size: 1.6rem; font-family: var(-
 main .app .appHeader h2 {margin: 0.5rem 0; font-size: 1.2rem; font-family: var(--heading-font); color: white;}
 main .app .appHeader h3 {margin: 0.5rem 0; font-size: 1rem;   font-family: var(--heading-font); color: white;}
 
-main .app {background-color: white; margin: 0.5rem; padding: .0.5rem 2%; background-color: #101727; min-height: 35rem;}
+main .app {background-color: white; margin: 0.5rem; padding: .0.5rem 2%; background-color: #191A2E; min-height: 35rem;}
 
 main .app h1 {font-size: 1.6rem; color: #64A494;}
 main .app h2 {font-size: 1.1rem; color: white;}
@@ -358,7 +358,7 @@ main .app h3 {font-size: 1rem; color: #64A494;}
 /* Fieldset */
 main .app {text-align: center;}
 main .app fieldset {margin: 0 auto; /*max-width: 90%;*/ margin-top: 1rem; border: solid 5px #64A494; border-radius: 0; background-color: #101727; color: white; font-weight: bold; transition: border-radius 2s, background-color 2s}
-main .app fieldset:hover {border-radius: 25px; border: solid 5px white; background-color: #184d47; color: black;}
+main .app fieldset:hover {border-radius: 25px; border: solid 5px white; background-color: #184d47; color: #191A2E;}
 main .app fieldset legend {color:white; font-weight: bold; padding: 0 1rem; font-size: 1.5rem; padding-bottom: 2rem;}
 main .app fieldset span {display: block;}
 
@@ -388,9 +388,11 @@ main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); 
 #detailsDiv{display: none;}
 
 #detailsBtn{font-size: 2rem; margin-top: 1rem;}
-#detailsBtn:hover{color: black;}
+#detailsBtn:hover{color: #191A2E;}
 
 #local, #temp {font-size: 2rem;}
+
+#openWeatherIcon {padding: 10px; display: block; margin: 0 auto;}
 
 
 .highlight {color: orange;}
