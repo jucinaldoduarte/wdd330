@@ -200,7 +200,20 @@ function getWeatherData(position) {
             let timestamp = jsObject.daily[i].dt;;
             let date = new Date(timestamp*1000);
             let forecastDate = document.createElement("SPAN");
-            forecastDate.textContent = `${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`;
+
+            let day = date.getDate();
+            let month = date.getMonth()+1;
+            let year = date.getFullYear();
+
+            if(day < 9){
+              day = `0${day}`
+            }
+
+            if(month < 9){
+              month = `0${month}`;
+            } 
+
+            forecastDate.textContent = `${month}/${day}/${year}`;
             forecastDiv.appendChild(forecastDate);
         }
 
@@ -265,7 +278,7 @@ function lastVisit(){
     month = `0${month}`;
   } 
 
-  today = `${month}-${day}-${year}`;
+  today = `${month}/${day}/${year}`;
    
   let lastVisit = localStorage.getItem('lastVisit'); 
     
