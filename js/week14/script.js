@@ -12,7 +12,9 @@ let iconCloud = "&#9729;";
 let iconUmbrella = "&#9730;";
 let iconSnowMan = "&#9731;";
 let iconArray = [];
-let iconAdd = "&#10010;";
+//let iconAdd = "&#10010;";
+let iconAdd = "&#10011;";
+
 iconArray.push(iconSun);
 iconArray.push(iconCloud);
 iconArray.push(iconUmbrella);
@@ -236,11 +238,11 @@ function showDetails(){
   if(iconAdd=="&#9866;"){    
     detailsDiv.style.display = "none";
     
-    iconAdd = "&#10010;";
+    iconAdd = "&#10011;";
     let img = htmlentities.decode(iconAdd);
     details.textContent = img; 
   }
-  else if(iconAdd=="&#10010;"){    
+  else if(iconAdd=="&#10011;"){    
     detailsDiv.style.display = "block";
 
     iconAdd = "&#9866;";  
