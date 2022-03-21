@@ -41,7 +41,7 @@ main h3 {font-size: 1rem; color: #64A494; padding: 0 2%;}
 /*ul {margin-top: 3rem;}*/
 ul li {color: white; list-style-type: none; margin-bottom: 1rem; padding: 0; margin-top: 1rem;}
 ul li a {font-size: 1rem; color:#64A494; text-decoration: none; font-family: var(--heading-font); font-weight: bold;}
-ul li a:hover{color: white;}
+ul li a:hover{color: white; font-size: 1.1rem;}
 
 footer {font-family: var(--paragraph-font); text-align: center; color: white; margin: 0 0.5rem;}
 #byu-link {color: white; list-style: none; text-decoration: none;}
