@@ -420,7 +420,7 @@ main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); 
       display: block;      
     }
 
-    #soon {text-align: center; font-size: 2rem; margin-bottom: 4rem;}
+  #soon {text-align: center; font-size: 1.5rem; margin-bottom: 4rem;}
 
       
   #counterDayDiv span {display: block; text-align: center;}
