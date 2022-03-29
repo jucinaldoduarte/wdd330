@@ -89,8 +89,8 @@ function formatString(text){
 function getWeatherData(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    const apiWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${appID}`;
-    const apiOneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${appID}`;
+    const apiWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${appID}`;
+    const apiOneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=${appID}`;
     
     //Current Weather        
     fetch(apiWeather)
@@ -127,7 +127,7 @@ function getWeatherData(position) {
         if (jsObject.main.temp != 'undefined'){
           let temp = document.createElement("SPAN");
           temp.setAttribute("id", "temp"); 
-          temp.textContent = `${jsObject.main.temp} ºC`;
+          temp.textContent = `${jsObject.main.temp} ºF`;
           currentWeatherDiv.appendChild(temp);
         }
 
@@ -188,7 +188,7 @@ function getWeatherData(position) {
 
             //Temperature
             let temp = document.createElement("SPAN");
-            temp.textContent = `${jsObject.daily[i].temp.max} ºC`;
+            temp.textContent = `${jsObject.daily[i].temp.max} ºF`;
             forecastDiv.appendChild(temp);
 
             //Weather Description
