@@ -23,6 +23,7 @@ main {background-color: white; margin: 0.5rem; /*padding: .0.5rem 2%;*/ backgrou
 main h1 {font-size: 1.1rem; color: #64A494; padding: 0 2%;}
 main h2 {font-size: 1rem; color: white; padding: 0 2%;}
 main h3 {font-size: 1rem; color: #64A494; padding: 0 2%;}
+main h4 {font-size: 0.9rem; color: white; padding: 0 2%;}
 
 /*-------------- NAV ----------------------*/
 #nav {text-align: center; padding: .0.5rem 2%;}
@@ -444,6 +445,22 @@ main .app fieldset img:hover {background-color: #e96e50; transform: scale(1.2); 
     to{
         border-color:#64A494;
     }
+}
+
+#appDoc p {
+    margin-left: 1.5rem;
+}
+
+#appDoc ol li {
+    margin-left: 1.5rem;
+}
+
+#appTitle {
+    color: #64A494;
+    text-decoration: none;
+}
+#appTitle:hover{
+    color: white;
 }
 
 .highlight {color: orange;}

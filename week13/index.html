@@ -51,6 +51,62 @@
                 <div id="counterMinDiv" class="border-circle"><span id="counterMinSpan"></span><label id="counterMinLabel"></label></div>               
                 <div id="counterSecDiv" class="border-circle"><span id="counterSecSpan"></span><label id="counterSecLabel"></label></div>
             </div>
+            <fieldset id="appDoc">
+                <legend>App Description Document</legend>
+                <h2>Name: <a id="appTitle" href="../week14/index.html">ClimaMatters.com</a></h2>
+
+                <h3>Purpose</h3>
+                <p>The app's purpose is to provide weather information based on the user's location. The weather data is provided through API by the OpenWeatherMap services, owned by OpenWeather Ltd, which provides global weather data for any location from different sources.</p>
+                <h3>Features</h3>
+                <h4>Current Weather</h4>
+                <p>Displays the current temperature and weather description based on the user's latitude and longitude provided by geolocation data from the browser used. If the user clicks on the "+" icon, the app shows the following additional information about the weather:</p>
+                <ol type="a">
+                    <li>Humidity</li>
+                    <li>Wind speed</li>
+                    <li>Wind Chill (only if the temperature is less than 50 and the wind speed is greater than 3)</li>
+                </ol>    
+                             
+                <h4>Daily Forecast for 7 Days</h4>
+                <h4>National Weather Alerts (only if alerts are active when accessing the app)</h4>
+                <h3>How to Use the Weather Application</h3> 
+                <p>On first access, for privacy reasons, the user's operating system will prompt the user to allow location access. 
+                    If the user accepts, the browser will use the functionality available on the device to access location information 
+                    using the Geolocation API and will display weather information based on location data. If the user's browser does not support the functionality, the following message will be displayed: "Geolocation is not supported by this browser".
+                    If the first access, the app will show the sentence "it seems like your first time here. Welcome!" at the bottom of the page. 
+                    On subsequent accesses, the app will show the user's last date and last location when using the app.
+                </p>
+                <h3>CSS Features</h3>
+                <h4>Transitions and Transforms</h4>
+                <ol type="a">
+                    <li>Page background. </li>
+                    <p>When loading the web site, a CSS animation is used to change the background color of the page.</p>
+                    <li>Web site icon</li>
+                    <p>When moving the mouse over the icon at the top of the website, the CSS transition feature is used to change the size of the website icon.</p>
+                    <li>Fieldset borders</li>
+                    <p>When moving the mouse inside an HTML element fieldset, the CSS Hover selector is used to round the edges and perform a transition of the color used in the image's background.</p>
+                </ol>  
+                <h3>Events</h3>
+                <p>When moving the mouse inside a fieldset HTML element, the onmouserover event executes a javascript function that modifies the background color of images inside the fieldset by CSS.</p>
+                <h3>Design process</h3>
+                <p>The design process was designed to simplify the visualization of weather information. Initially, the web application planning was developed, including the initial choices for color scheme, typography and wireframes. 
+                    Then, when writing the code, tweaks were made to the design to simplify the app creation process. Finally, minor adjustments were made to the colors used and font sizes to improve the user experience.
+                </p>  
+                <h3>Application of coding topics from the course</h3> 
+                <h4>Document Object Model</h4>
+                <p>The Document Object Model (DOM) was used in the project to create, read and change properties of HTML elements.</p>
+                <h4>Javascript Functions</h4>
+                <p>The Javascript functions were used to perform particular tasks and execute actions based on events.</p>
+
+                <h4>JSON</h4>
+                <p>The JSON format was used to return the data used in the application using the fetch methods.</p>
+
+                <h4>CSS</h4>
+                <p>CSS features were used to transform and transition HTML objects in response to mouse click or page load events.</p> 
+
+                <h4>LocalStorage</h4>
+                <p>The LocalStorage was used to store and modify information in the user's browser such as the date and location of the last visit to the website.</p>
+                    
+                </fieldset>
         </main>                    
         <footer>
             <p>&copy; Jucinaldo Duarte | Brazil | <a id="byu-link" href="https://www.byui.edu/online" target="_blank">BYUI Online Learning</a></p>
